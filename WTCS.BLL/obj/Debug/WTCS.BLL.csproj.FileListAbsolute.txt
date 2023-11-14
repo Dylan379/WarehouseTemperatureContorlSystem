@@ -1,0 +1,15 @@
+D:\c#workSpace\WTCS\WTCS\WTCS.BLL\bin\Debug\WTCS.BLL.dll
+D:\c#workSpace\WTCS\WTCS\WTCS.BLL\bin\Debug\WTCS.BLL.pdb
+D:\c#workSpace\WTCS\WTCS\WTCS.BLL\bin\Debug\Common.dll
+D:\c#workSpace\WTCS\WTCS\WTCS.BLL\bin\Debug\Communicate.dll
+D:\c#workSpace\WTCS\WTCS\WTCS.BLL\bin\Debug\WTCS.DAL.dll
+D:\c#workSpace\WTCS\WTCS\WTCS.BLL\bin\Debug\WTCS.Models.dll
+D:\c#workSpace\WTCS\WTCS\WTCS.BLL\bin\Debug\Common.pdb
+D:\c#workSpace\WTCS\WTCS\WTCS.BLL\bin\Debug\Communicate.pdb
+D:\c#workSpace\WTCS\WTCS\WTCS.BLL\bin\Debug\WTCS.DAL.pdb
+D:\c#workSpace\WTCS\WTCS\WTCS.BLL\bin\Debug\WTCS.Models.pdb
+D:\c#workSpace\WTCS\WTCS\WTCS.BLL\obj\Debug\WTCS.BLL.csproj.AssemblyReference.cache
+D:\c#workSpace\WTCS\WTCS\WTCS.BLL\obj\Debug\WTCS.BLL.csproj.CoreCompileInputs.cache
+D:\c#workSpace\WTCS\WTCS\WTCS.BLL\obj\Debug\WTCS.BLL.csproj.CopyComplete
+D:\c#workSpace\WTCS\WTCS\WTCS.BLL\obj\Debug\WTCS.BLL.dll
+D:\c#workSpace\WTCS\WTCS\WTCS.BLL\obj\Debug\WTCS.BLL.pdb

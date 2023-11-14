@@ -1,0 +1,6 @@
+D:\c#workSpace\WTCS\WTCS\WTCS.DbUtility\bin\Debug\WTCS.DbUtility.dll
+D:\c#workSpace\WTCS\WTCS\WTCS.DbUtility\bin\Debug\WTCS.DbUtility.pdb
+D:\c#workSpace\WTCS\WTCS\WTCS.DbUtility\obj\Debug\WTCS.DbUtility.csproj.AssemblyReference.cache
+D:\c#workSpace\WTCS\WTCS\WTCS.DbUtility\obj\Debug\WTCS.DbUtility.csproj.CoreCompileInputs.cache
+D:\c#workSpace\WTCS\WTCS\WTCS.DbUtility\obj\Debug\WTCS.DbUtility.dll
+D:\c#workSpace\WTCS\WTCS\WTCS.DbUtility\obj\Debug\WTCS.DbUtility.pdb

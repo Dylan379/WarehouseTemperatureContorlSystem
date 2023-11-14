@@ -76,5 +76,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{7522b7c2-9164-4877-be56-065c0875bc22}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WTCS.BLL\WTCS.BLL.csproj">
+      <Project>{dc6c1b7a-1ea8-4720-8a51-b72457ad856b}</Project>
+      <Name>WTCS.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WTCS.Models\WTCS.Models.csproj">
+      <Project>{b7c19027-29f8-43b9-8106-988b93dd1150}</Project>
+      <Name>WTCS.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

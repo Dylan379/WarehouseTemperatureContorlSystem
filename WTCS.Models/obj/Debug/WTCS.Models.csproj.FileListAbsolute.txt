@@ -1,0 +1,9 @@
+D:\c#workSpace\WTCS\WTCS\WTCS.Models\bin\Debug\WTCS.Models.dll
+D:\c#workSpace\WTCS\WTCS\WTCS.Models\bin\Debug\WTCS.Models.pdb
+D:\c#workSpace\WTCS\WTCS\WTCS.Models\bin\Debug\Common.dll
+D:\c#workSpace\WTCS\WTCS\WTCS.Models\bin\Debug\Common.pdb
+D:\c#workSpace\WTCS\WTCS\WTCS.Models\obj\Debug\WTCS.Models.csproj.AssemblyReference.cache
+D:\c#workSpace\WTCS\WTCS\WTCS.Models\obj\Debug\WTCS.Models.csproj.CoreCompileInputs.cache
+D:\c#workSpace\WTCS\WTCS\WTCS.Models\obj\Debug\WTCS.Models.csproj.CopyComplete
+D:\c#workSpace\WTCS\WTCS\WTCS.Models\obj\Debug\WTCS.Models.dll
+D:\c#workSpace\WTCS\WTCS\WTCS.Models\obj\Debug\WTCS.Models.pdb

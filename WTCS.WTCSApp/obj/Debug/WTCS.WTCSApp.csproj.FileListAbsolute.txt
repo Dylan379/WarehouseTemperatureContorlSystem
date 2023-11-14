@@ -1,0 +1,16 @@
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\bin\Debug\WTCS.WTCSApp.exe.config
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\bin\Debug\WTCS.WTCSApp.exe
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\bin\Debug\WTCS.WTCSApp.pdb
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\bin\Debug\Common.dll
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\bin\Debug\WTCS.BLL.dll
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\bin\Debug\WTCS.Models.dll
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\bin\Debug\Common.pdb
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\bin\Debug\WTCS.BLL.pdb
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\bin\Debug\WTCS.Models.pdb
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.csproj.AssemblyReference.cache
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.Properties.Resources.resources
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.csproj.GenerateResource.cache
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.csproj.CoreCompileInputs.cache
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.csproj.CopyComplete
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.exe
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.pdb

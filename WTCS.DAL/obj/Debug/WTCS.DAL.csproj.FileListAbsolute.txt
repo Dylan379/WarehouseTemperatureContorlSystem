@@ -1,0 +1,13 @@
+D:\c#workSpace\WTCS\WTCS\WTCS.DAL\bin\Debug\WTCS.DAL.dll
+D:\c#workSpace\WTCS\WTCS\WTCS.DAL\bin\Debug\WTCS.DAL.pdb
+D:\c#workSpace\WTCS\WTCS\WTCS.DAL\bin\Debug\Common.dll
+D:\c#workSpace\WTCS\WTCS\WTCS.DAL\bin\Debug\WTCS.DbUtility.dll
+D:\c#workSpace\WTCS\WTCS\WTCS.DAL\bin\Debug\WTCS.Models.dll
+D:\c#workSpace\WTCS\WTCS\WTCS.DAL\bin\Debug\Common.pdb
+D:\c#workSpace\WTCS\WTCS\WTCS.DAL\bin\Debug\WTCS.DbUtility.pdb
+D:\c#workSpace\WTCS\WTCS\WTCS.DAL\bin\Debug\WTCS.Models.pdb
+D:\c#workSpace\WTCS\WTCS\WTCS.DAL\obj\Debug\WTCS.DAL.csproj.AssemblyReference.cache
+D:\c#workSpace\WTCS\WTCS\WTCS.DAL\obj\Debug\WTCS.DAL.csproj.CoreCompileInputs.cache
+D:\c#workSpace\WTCS\WTCS\WTCS.DAL\obj\Debug\WTCS.DAL.csproj.CopyComplete
+D:\c#workSpace\WTCS\WTCS\WTCS.DAL\obj\Debug\WTCS.DAL.dll
+D:\c#workSpace\WTCS\WTCS\WTCS.DAL\obj\Debug\WTCS.DAL.pdb
