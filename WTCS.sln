@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WTCS.WTCSApp", "WTCS.WTCSApp\WTCS.WTCSApp.csproj", "{F2756C31-B4CE-475D-86CB-B3656B98DCCD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2756C31-B4CE-475D-86CB-B3656B98DCCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2756C31-B4CE-475D-86CB-B3656B98DCCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2756C31-B4CE-475D-86CB-B3656B98DCCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2756C31-B4CE-475D-86CB-B3656B98DCCD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {492A5150-08A7-46CC-867F-C13962A75240}
+	EndGlobalSection
+EndGlobal
