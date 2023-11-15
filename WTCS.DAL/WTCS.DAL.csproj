@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\BaseDAL.cs" />
+    <Compile Include="Base\BQuery.cs" />
     <Compile Include="Base\CreateSql.cs" />
     <Compile Include="Base\SqlModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

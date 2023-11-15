@@ -72,12 +72,114 @@ namespace WTCS.DAL.Base
         }
 
 
+        /// <summary>
+        /// 创建参数列表
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="properties"></param>
+        /// <param name="t"></param>
+        /// <returns></returns>
         private static SqlParameter[] CreateParameters<T>(PropertyInfo[] properties, T t)
         {
             // 取出对象t中p属性值 ??判断是否为NULL
             SqlParameter[] arrParas = properties.Select(p => new SqlParameter("@" + p.GetColName(), p.GetValue(t) ?? DBNull.Value)).ToArray();
             return arrParas;
         }
+
+        /// <summary>
+        /// 生成真删除SQL语句
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="strWhere"></param>
+        /// <returns></returns>
+        public static string CreatDeleteSql<T>(string strWhere)
+        {
+            Type type = typeof(T);
+            string sql = $"DELETE FROM [{type.GetTName()}] WHERE 1=1";
+            if (string.IsNullOrEmpty(strWhere))
+                sql += "1=1";
+            else
+                sql += strWhere;
+            return sql;
+        }
+
+        /// <summary>
+        /// 生成逻辑删除语句,基于更新sql语句
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="strWhere"></param>
+        /// <param name="isDelete"></param>
+        /// <returns></returns>
+        public static string CreatLogicDeleteSql<T>(string strWhere, int isDelete)
+        {
+            Type type = typeof(T);
+            string sql = $"UPDATE [{type.GetTName()}] SET IsDeleted={isDelete} WHERE 1=1";
+            if (string.IsNullOrEmpty(strWhere))
+                sql += "and" + strWhere;
+            return sql;
+        }
+
+        /// <summary>
+        /// 生成查找语句
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="strWhere"></param>
+        /// <param name="cols"></param>
+        /// <returns></returns>
+        public static string CreatSelectSql<T>(string strWhere, string cols)
+        {
+            Type type = typeof(T);
+            PropertyInfo[] properties = PropertyHelper.GetTypeProperties<T>(cols);
+            if (string.IsNullOrEmpty(cols))
+                cols = "*";
+            if (string.IsNullOrEmpty(strWhere))
+                strWhere = "1=1";
+            string sql = $"SELECT {cols} FROM [{type.GetTName()}] WHERE {strWhere}";
+            return sql;
+        }
+
+        /// <summary>
+        /// 生成带行号的选择语句
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="strWhere"></param>
+        /// <param name="cols"></param>
+        /// <returns></returns>
+        public static string CreatRowsSelectSql<T>(string strWhere, string cols)
+        {
+            Type type = typeof(T);
+            PropertyInfo[] properties = PropertyHelper.GetTypeProperties<T>(cols);
+            string columns = string.Join(",", properties.Select(p => $"{p.GetColName()}"));
+            string primaryKeyName = type.GetPrimary();
+            if (string.IsNullOrEmpty(strWhere))
+                strWhere = "1=1";
+            //ASC 升序
+            string sql = $"SELECT ROW_NUMBER() OVER (ORDER BY {primaryKeyName} ASC) AS Id,{columns} FROM [{type.GetTName()}] WHERE {strWhere}";
+            return sql;
+        }
+
+        /// <summary>
+        /// 获取列名字符串(参数指定不需要的列)
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="notHaveCols"></param>
+        /// <returns></returns>
+        public static string GetColsString<T>(string notHaveCols)
+        {
+            //获得属性列表
+            List<string> cols = typeof(T).GetProperties().Select(p => p.GetColName()).ToList();
+            List<string> notCols = new List<string>();
+
+            if (!string.IsNullOrEmpty(notHaveCols))
+            {
+                notCols = new List<string>(notHaveCols.Split(','));
+                cols = cols.Where(c => !notCols.Contains(c.ToLower())).ToList();
+            }
+            string colsStr = string.Join(",", cols);
+            return colsStr;
+        }
+
+
 
 
     }

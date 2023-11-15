@@ -13,3 +13,5 @@ D:\c#workSpace\WTCS\WTCS\WTCS.BLL\obj\Debug\WTCS.BLL.csproj.CoreCompileInputs.ca
 D:\c#workSpace\WTCS\WTCS\WTCS.BLL\obj\Debug\WTCS.BLL.csproj.CopyComplete
 D:\c#workSpace\WTCS\WTCS\WTCS.BLL\obj\Debug\WTCS.BLL.dll
 D:\c#workSpace\WTCS\WTCS\WTCS.BLL\obj\Debug\WTCS.BLL.pdb
+D:\c#workSpace\WTCS\WTCS\WTCS.BLL\bin\Debug\WTCS.DbUtility.dll
+D:\c#workSpace\WTCS\WTCS\WTCS.BLL\bin\Debug\WTCS.DbUtility.pdb

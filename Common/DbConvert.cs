@@ -130,6 +130,38 @@ namespace Common
             return list;
         }
 
+        /// <summary>
+        /// 将SqlDataReader对象转换成实体（返回一条数据）
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="reader"></param>
+        /// <returns></returns>
+        public static T SqlDataReaderToModel<T>(SqlDataReader reader, string cols)
+        {
+            //创建指定类型的实例
+            T model = Activator.CreateInstance<T>();
+            Type type = typeof(T);
+            //获取指定列名的属性数组
+            var properties = PropertyHelper.GetTypeProperties<T>(cols);
+            if (reader.Read())
+            {
+                //将指定列的值赋值给对应的属性
+                foreach (var p in properties)
+                {
+                    string colName = p.GetColName();
+                    if (reader[colName] is DBNull)
+                    {
+                        p.SetValue(model, null);
+                    }
+                    else
+                    {
+                        SetPropertyValue<T>(model, reader[colName], p);
+                    }
+                }
+                return model;
+            }
+            else return default(T);
+        }
 
         //设置属性值  属性的数据类型Nullable<int>
         private static void SetPropertyValue<T>(T model, object obj, PropertyInfo property)
