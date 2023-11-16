@@ -14,3 +14,10 @@ D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.csproj.CoreCompileI
 D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.csproj.CopyComplete
 D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.exe
 D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.pdb
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.UControls.UPanel.resources
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.FrmLogin.resources
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\bin\Debug\WTCS.DAL.dll
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\bin\Debug\WTCS.DbUtility.dll
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\bin\Debug\WTCS.DAL.pdb
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\bin\Debug\WTCS.DbUtility.pdb
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.FrmMain.resources

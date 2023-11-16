@@ -54,12 +54,9 @@ namespace Common
                     ColumnAttribute columnAttribute = attr as ColumnAttribute;
                     columnName = columnAttribute.ColumnName;
                 }
-
-                if (string.IsNullOrEmpty(columnName))
-                {
-                    columnName = propertyInfo.Name;
-                }
             }
+            if (string.IsNullOrEmpty(columnName))
+                columnName = propertyInfo.Name;
             return columnName;
         }
 

@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +47,7 @@
     <Compile Include="CustomAttributes\PrimaryKeyAttribute.cs" />
     <Compile Include="CustomAttributes\TableAttribute.cs" />
     <Compile Include="DbConvert.cs" />
+    <Compile Include="PaintCommon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyHelper.cs" />
     <Compile Include="StringHelper.cs" />

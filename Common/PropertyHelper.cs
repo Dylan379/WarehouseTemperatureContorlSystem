@@ -18,8 +18,8 @@ namespace Common
         public static PropertyInfo[] GetTypeProperties<T>(string cols)
         {
             Type type = typeof(T);
-            List<string> listCols = new List<string>(cols.Split(','));
-            //List<string> listCols = StringHelper.GetStrArray(cols);
+            //将列名字符串转换成List,转换成小写
+            List<string> listCols = cols.GetStrList(',', true);
             //获取所有属性
             PropertyInfo[] properties = type.GetProperties();
             if (listCols != null && listCols.Count > 0)
