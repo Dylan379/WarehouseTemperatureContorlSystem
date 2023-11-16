@@ -9,7 +9,7 @@ using WTCS.DbUtility;
 
 namespace WTCS.DAL.Base
 {
-    public class BaseDAL<T> where T : class
+    public class BaseDAL<T> : BQuery<T> where T : class
     {
 
         /// <summary>
