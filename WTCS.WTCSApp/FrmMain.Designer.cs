@@ -30,7 +30,7 @@ namespace WTCS.WTCSApp
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.topPanel = new System.Windows.Forms.Panel();
             this.uiPanel = new System.Windows.Forms.Panel();
             this.btnMin = new WTCS.WTCSApp.UControls.UIconButton();
             this.btnClose = new WTCS.WTCSApp.UControls.UIconButton();
@@ -42,8 +42,8 @@ namespace WTCS.WTCSApp
             this.label4 = new System.Windows.Forms.Label();
             this.loginUserName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panelPageTop = new System.Windows.Forms.Panel();
+            this.closeButton = new System.Windows.Forms.Button();
             this.btnStoreTemperPage = new WTCS.WTCSApp.UControls.UPageButton();
             this.btnProductInStorePage = new WTCS.WTCSApp.UControls.UPageButton();
             this.btnProductManagePage = new WTCS.WTCSApp.UControls.UPageButton();
@@ -54,23 +54,25 @@ namespace WTCS.WTCSApp
             this.btnStoreTemperManage = new WTCS.WTCSApp.UControls.UMenuButton();
             this.btnProductManage = new WTCS.WTCSApp.UControls.UMenuButton();
             this.btnStoreManage = new WTCS.WTCSApp.UControls.UMenuButton();
-            this.panel1.SuspendLayout();
+            this.topPanel.SuspendLayout();
             this.uiPanel.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panelPageTop.SuspendLayout();
             this.uPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // topPanel
             // 
-            this.panel1.Controls.Add(this.uiPanel);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.uPanel1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1382, 89);
-            this.panel1.TabIndex = 0;
+            this.topPanel.Controls.Add(this.uiPanel);
+            this.topPanel.Controls.Add(this.label1);
+            this.topPanel.Controls.Add(this.uPanel1);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(1382, 89);
+            this.topPanel.TabIndex = 0;
+            this.topPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanelMouseDown);
+            this.topPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TopPanelMouseMove);
             // 
             // uiPanel
             // 
@@ -206,36 +208,37 @@ namespace WTCS.WTCSApp
             this.label2.TabIndex = 0;
             this.label2.Text = "登录用户:";
             // 
-            // panel3
+            // panelPageTop
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panelPageTop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
-            this.panel3.Controls.Add(this.button1);
-            this.panel3.Controls.Add(this.btnStoreTemperPage);
-            this.panel3.Controls.Add(this.btnProductInStorePage);
-            this.panel3.Controls.Add(this.btnProductManagePage);
-            this.panel3.Controls.Add(this.btnStoreRegionPage);
-            this.panel3.Controls.Add(this.btnStorePage);
-            this.panel3.Location = new System.Drawing.Point(309, 98);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1021, 40);
-            this.panel3.TabIndex = 3;
+            this.panelPageTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
+            this.panelPageTop.Controls.Add(this.closeButton);
+            this.panelPageTop.Controls.Add(this.btnStoreTemperPage);
+            this.panelPageTop.Controls.Add(this.btnProductInStorePage);
+            this.panelPageTop.Controls.Add(this.btnProductManagePage);
+            this.panelPageTop.Controls.Add(this.btnStoreRegionPage);
+            this.panelPageTop.Controls.Add(this.btnStorePage);
+            this.panelPageTop.Location = new System.Drawing.Point(309, 98);
+            this.panelPageTop.Name = "panelPageTop";
+            this.panelPageTop.Size = new System.Drawing.Size(1021, 40);
+            this.panelPageTop.TabIndex = 3;
             // 
-            // button1
+            // closeButton
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(145)))), ((int)(((byte)(239)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(978, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(45, 40);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
+            this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(145)))), ((int)(((byte)(239)))));
+            this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.closeButton.ForeColor = System.Drawing.Color.White;
+            this.closeButton.Location = new System.Drawing.Point(978, 0);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(45, 40);
+            this.closeButton.TabIndex = 5;
+            this.closeButton.Text = "X";
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.ClickCloseBtn);
             // 
             // btnStoreTemperPage
             // 
@@ -294,14 +297,20 @@ namespace WTCS.WTCSApp
             // 
             // panelPage
             // 
+            this.panelPage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelPage.Location = new System.Drawing.Point(309, 155);
             this.panelPage.Name = "panelPage";
             this.panelPage.Size = new System.Drawing.Size(1021, 577);
             this.panelPage.TabIndex = 9;
+            this.panelPage.SizeChanged += new System.EventHandler(this.PagePanelSizeChanged);
             this.panelPage.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // uPanel2
             // 
+            this.uPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.uPanel2.AnotherBackGroundColor = System.Drawing.Color.Transparent;
             this.uPanel2.BackGroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(116)))));
             this.uPanel2.BorderColor = System.Drawing.Color.Gray;
@@ -362,22 +371,22 @@ namespace WTCS.WTCSApp
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(61)))), ((int)(((byte)(134)))));
             this.ClientSize = new System.Drawing.Size(1382, 800);
             this.Controls.Add(this.panelPage);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panelPageTop);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.uPanel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.topPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMain";
             this.Text = "温控系统主页面";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.Load += new System.EventHandler(this.FrmMain_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.topPanel.ResumeLayout(false);
+            this.topPanel.PerformLayout();
             this.uiPanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
+            this.panelPageTop.ResumeLayout(false);
             this.uPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -385,7 +394,7 @@ namespace WTCS.WTCSApp
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel topPanel;
         private UControls.UPanel uPanel1;
         private System.Windows.Forms.Label label1;
         private UControls.UPanel uPanel2;
@@ -394,7 +403,7 @@ namespace WTCS.WTCSApp
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label loginUserName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelPageTop;
         private System.Windows.Forms.Panel panelPage;
         private UControls.UMenuButton btnStoreManage;
         private UControls.UIconButton btnClose;
@@ -408,6 +417,6 @@ namespace WTCS.WTCSApp
         private UControls.UPageButton btnStoreTemperPage;
         private UControls.UMenuButton btnStoreTemperManage;
         private UControls.UMenuButton btnProductManage;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button closeButton;
     }
 }

@@ -89,12 +89,18 @@ namespace WTCS.WTCSApp
                 if (IsOpenedFormInPanel(form, panel)) //若form存在panel中，就替换
                     return;
                 else
+                {
                     form = openForm;
+                    //panel.Controls.Clear();
+                    //panel.Controls.Add(form);
+                    //form.Show();
+                    //return;
+                }
             }
             panel.Controls.Clear();
             form.TopLevel = false;
-            form.WindowState = FormWindowState.Maximized;
             form.FormBorderStyle = FormBorderStyle.None;
+            form.WindowState = FormWindowState.Maximized;
             form.Dock = DockStyle.Fill;
             panel.AutoScroll = true;
             panel.Controls.Add(form);

@@ -74,15 +74,6 @@ namespace WTCS.WTCSApp.UControls
 
         }
 
-        private void lableBtnText_Click(object sender, EventArgs e)
-        {
-            OnClick(e);
-        }
-
-        private void pbImg_Click(object sender, EventArgs e)
-        {
-            OnClick(e);
-        }
 
         private void lableBtnText_MouseEnter(object sender, EventArgs e)
         {
@@ -92,6 +83,16 @@ namespace WTCS.WTCSApp.UControls
         private void pbImg_MouseEnter(object sender, EventArgs e)
         {
             OnMouseEnter(e);
+        }
+
+        private void lableBtnText_Click_1(object sender, EventArgs e)
+        {
+            OnClick(e);
+        }
+
+        private void pbImg_Click_1(object sender, EventArgs e)
+        {
+            OnClick(e);
         }
     }
 }

@@ -30,10 +30,12 @@ namespace WTCS.WTCSApp.UControls
 
         public override Color ForeColor { get => lbText.ForeColor; set => lbText.ForeColor = value; }
 
+
+
         protected override void OnClick(EventArgs e)
         {
             base.OnClick(e);
-            lbText.ForeColor = Color.FromArgb(45, 50, 116);
+            lbText.ForeColor = Color.White;
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -44,6 +44,7 @@ namespace WTCS.WTCSApp.UControls
             this.lableBtnText.Size = new System.Drawing.Size(65, 33);
             this.lableBtnText.TabIndex = 1;
             this.lableBtnText.Text = "文本";
+            this.lableBtnText.Click += new System.EventHandler(this.lableBtnText_Click_1);
             this.lableBtnText.MouseEnter += new System.EventHandler(this.lableBtnText_MouseEnter);
             // 
             // pbImg
@@ -55,6 +56,7 @@ namespace WTCS.WTCSApp.UControls
             this.pbImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbImg.TabIndex = 0;
             this.pbImg.TabStop = false;
+            this.pbImg.Click += new System.EventHandler(this.pbImg_Click_1);
             this.pbImg.MouseEnter += new System.EventHandler(this.pbImg_MouseEnter);
             // 
             // UMenuButton
