@@ -21,3 +21,10 @@ D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\bin\Debug\WTCS.DbUtility.dll
 D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\bin\Debug\WTCS.DAL.pdb
 D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\bin\Debug\WTCS.DbUtility.pdb
 D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.FrmMain.resources
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.UControls.UMenuButton.resources
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.UControls.UPageButton.resources
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.product.FormProductInStore.resources
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.product.FormProductList.resources
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.storeTemper.FormStoreRegionTemperList.resources
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.store.FormRegionList.resources
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.store.FormStoreList.resources

@@ -3,4 +3,3 @@ D:\c#workSpace\WTCS\WTCS\Common\bin\Debug\Common.pdb
 D:\c#workSpace\WTCS\WTCS\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 D:\c#workSpace\WTCS\WTCS\Common\obj\Debug\Common.dll
 D:\c#workSpace\WTCS\WTCS\Common\obj\Debug\Common.pdb
-D:\c#workSpace\WTCS\WTCS\Common\obj\Debug\Common.csproj.AssemblyReference.cache

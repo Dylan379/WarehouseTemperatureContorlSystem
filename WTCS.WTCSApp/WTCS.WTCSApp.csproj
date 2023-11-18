@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormUtility.cs" />
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,13 +78,61 @@
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="MsgBoxHelper.cs" />
+    <Compile Include="product\FormProductInStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="product\FormProductInStore.Designer.cs">
+      <DependentUpon>FormProductInStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="product\FormProductList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="product\FormProductList.Designer.cs">
+      <DependentUpon>FormProductList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="storeTemper\FormStoreRegionTemperList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storeTemper\FormStoreRegionTemperList.Designer.cs">
+      <DependentUpon>FormStoreRegionTemperList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="store\FormRegionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="store\FormRegionList.Designer.cs">
+      <DependentUpon>FormRegionList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="store\FormStoreList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="store\FormStoreList.Designer.cs">
+      <DependentUpon>FormStoreList.cs</DependentUpon>
+    </Compile>
     <Compile Include="UControls\UCircleButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UControls\UCircleButton.Designer.cs">
       <DependentUpon>UCircleButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControls\UIconButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UControls\UIconButton.Designer.cs">
+      <DependentUpon>UIconButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControls\UMenuButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControls\UMenuButton.Designer.cs">
+      <DependentUpon>UMenuButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControls\UPageButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControls\UPageButton.Designer.cs">
+      <DependentUpon>UPageButton.cs</DependentUpon>
     </Compile>
     <Compile Include="UControls\UPanel.cs">
       <SubType>Component</SubType>
@@ -97,6 +146,12 @@
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="product\FormProductInStore.resx">
+      <DependentUpon>FormProductInStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="product\FormProductList.resx">
+      <DependentUpon>FormProductList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -107,6 +162,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="storeTemper\FormStoreRegionTemperList.resx">
+      <DependentUpon>FormStoreRegionTemperList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="store\FormRegionList.resx">
+      <DependentUpon>FormRegionList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="store\FormStoreList.resx">
+      <DependentUpon>FormStoreList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControls\UMenuButton.resx">
+      <DependentUpon>UMenuButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControls\UPageButton.resx">
+      <DependentUpon>UPageButton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UControls\UPanel.resx">
       <DependentUpon>UPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,5 +228,39 @@
   <ItemGroup>
     <None Include="Resources\minimalist.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R-C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\store1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1700189500065.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thumbnail_large.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\product.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Temper.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
