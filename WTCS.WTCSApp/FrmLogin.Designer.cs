@@ -65,6 +65,11 @@ namespace WTCS.WTCSApp
             this.loginBtn.BackGroundColor = System.Drawing.Color.RoyalBlue;
             this.loginBtn.BorderColor = System.Drawing.Color.RoyalBlue;
             this.loginBtn.BorderWidth = 0;
+            this.loginBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(133)))));
+            this.loginBtn.FlatAppearance.BorderSize = 0;
+            this.loginBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.loginBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginBtn.Font = new System.Drawing.Font("Microsoft YaHei", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.loginBtn.ForeColor = System.Drawing.Color.White;
             this.loginBtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;

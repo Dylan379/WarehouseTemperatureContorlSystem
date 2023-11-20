@@ -106,5 +106,41 @@ namespace WTCS.WTCSApp
             panel.Controls.Add(form);
             form.Show();
         }
+
+
+
+        /// <summary>
+        /// DataGridView基本操作列的显示处理
+        /// </summary>
+        /// <param name="dgv"></param>
+        /// <param name="isDeleted"></param>
+        public static void ShowDgvCols(this DataGridView dgv, bool isDeleted)
+        {
+            dgv.Columns["colEdit"].Visible = !isDeleted;
+            dgv.Columns["colDelete"].Visible = !isDeleted;
+            dgv.Columns["colRecover"].Visible = isDeleted;
+            dgv.Columns["colRemove"].Visible = isDeleted;
+        }
+
+        public static string GetDelName(int delCode)
+        {
+            string delName = "删除";
+            switch (delCode)
+            {
+                case 1:
+                    delName = "删除";
+                    break;
+                case 0:
+                    delName = "恢复";
+                    break;
+                case 2:
+                    delName = "移除";
+                    break;
+            }
+            return delName;
+        }
+
+
+
     }
 }

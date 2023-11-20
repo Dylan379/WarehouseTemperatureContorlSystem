@@ -16,9 +16,10 @@ namespace WTCS.WTCSApp.UControls
     {
         public UCircleButton()
         {
+            FlatStyle = FlatStyle.Flat;
+            FlatAppearance.BorderSize = 0;
             InitializeComponent();
         }
-
 
         //重绘命令消息ID  0xF
         private const int WM_PAINT = 0xF;

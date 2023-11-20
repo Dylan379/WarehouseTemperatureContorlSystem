@@ -46,6 +46,7 @@
     <Compile Include="Base\CreateSql.cs" />
     <Compile Include="Base\SqlModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StoreDAL.cs" />
     <Compile Include="UserDAL.cs" />
   </ItemGroup>
   <ItemGroup>

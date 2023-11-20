@@ -114,7 +114,7 @@ namespace WTCS.DAL.Base
         {
             Type type = typeof(T);
             string sql = $"UPDATE [{type.GetTName()}] SET IsDeleted={isDelete} WHERE 1=1";
-            if (string.IsNullOrEmpty(strWhere))
+            if (!string.IsNullOrEmpty(strWhere))
                 sql += "and" + strWhere;
             return sql;
         }

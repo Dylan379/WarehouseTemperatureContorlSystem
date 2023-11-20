@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FModels\FInfoData.cs" />
     <Compile Include="FormUtility.cs" />
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -104,11 +105,23 @@
     <Compile Include="store\FormRegionList.Designer.cs">
       <DependentUpon>FormRegionList.cs</DependentUpon>
     </Compile>
+    <Compile Include="store\FormStoreInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="store\FormStoreInfo.Designer.cs">
+      <DependentUpon>FormStoreInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="store\FormStoreList.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="store\FormStoreList.Designer.cs">
       <DependentUpon>FormStoreList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="store\FormStoreRegionInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="store\FormStoreRegionInfo.Designer.cs">
+      <DependentUpon>FormStoreRegionInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="UControls\UCircleButton.cs">
       <SubType>Component</SubType>
@@ -168,8 +181,14 @@
     <EmbeddedResource Include="store\FormRegionList.resx">
       <DependentUpon>FormRegionList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="store\FormStoreInfo.resx">
+      <DependentUpon>FormStoreInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="store\FormStoreList.resx">
       <DependentUpon>FormStoreList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="store\FormStoreRegionInfo.resx">
+      <DependentUpon>FormStoreRegionInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UControls\UMenuButton.resx">
       <DependentUpon>UMenuButton.cs</DependentUpon>
