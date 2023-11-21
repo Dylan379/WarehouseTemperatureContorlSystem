@@ -52,6 +52,59 @@ namespace WTCS.DAL
         }
 
 
+        /// <summary>
+        /// 根据仓库编号获取仓库信息
+        /// </summary>
+        /// <param name="storeId"></param>
+        /// <returns></returns>
+        public StoreInfoModel GetStore(int storeId)
+        {
+            string cols = CreateSql.GetColsString<StoreInfoModel>("IsDeleted");
+            return GetById(storeId, cols);
+        }
 
+        public bool[] ExistsStore(string storeName, string storeNo)
+        {
+            bool isNoExists = false;
+            if (!string.IsNullOrEmpty(storeNo))
+                isNoExists = ExistsByName("StoreNo", storeNo);
+            bool isNameExists = false;
+            if (!string.IsNullOrEmpty(storeName))
+                isNameExists = ExistsByName("StoreName", storeName);
+            return new bool[] { isNameExists, isNoExists };
+        }
+
+
+        /// <summary>
+        /// 仓库信息  
+        /// </summary>
+        /// <param name="storeInfo"></param>
+        /// <param name="isGetId">0---代表返回  1---代表不返回</param>
+        /// <returns></returns>
+        public int AddStore(StoreInfoModel storeInfo, int isGetId)
+        {
+            string cols = "StoreName,StoreNo,Remark";
+            return Add(storeInfo, cols, isGetId);
+        }
+
+        /// <summary>
+        /// 更新仓库信息 
+        /// </summary>
+        /// <param name="storeInfo"></param>
+        /// <returns></returns>
+        public bool UpdateStore(StoreInfoModel storeInfo)
+        {
+            string cols = CreateSql.GetColsString<StoreInfoModel>("RegionCount,IsDeleted");
+            return Update(storeInfo, cols);
+        }
+
+        /// <summary>
+        /// 获取所有仓库列表
+        /// </summary>
+        /// <returns></returns>
+        public List<StoreInfoModel> GetAllStores()
+        {
+            return GetModelList("StoreId,StoreName", 0);
+        }
     }
 }

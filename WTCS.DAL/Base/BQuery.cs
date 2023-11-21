@@ -72,7 +72,7 @@ namespace WTCS.DAL.Base
         public bool ExistsByName(string sName, string vName)
         {
             string strWHere = $"{sName}=@{sName}";
-            strWHere += "and IsDeleted=0";//有效数据中查询
+            strWHere += " and IsDeleted=0";//有效数据中查询
             SqlParameter[] parameters = { new SqlParameter($"@{sName}", vName) };
             return Exists(strWHere, parameters);
         }

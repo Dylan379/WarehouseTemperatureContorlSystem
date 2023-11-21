@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.CustomAttributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,10 @@ namespace WTCS.Models.DModels
     /// <summary>
     /// 仓库区域信息实体
     /// </summary>
+    /// 
+
+    [Table("StoreRegionInfoModel")]
+    [PrimaryKey("SRegionId", autoIncrement = true)]
     class StoreRegionInfoModel
     {
         public int SRegionId { get; set; }

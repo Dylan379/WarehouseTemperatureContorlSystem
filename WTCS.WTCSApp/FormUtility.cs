@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WTCS.BLL;
+using WTCS.Models.DModels;
+using WTCS.WTCSApp.FModels;
 
 namespace WTCS.WTCSApp
 {
@@ -139,6 +142,45 @@ namespace WTCS.WTCSApp
             }
             return delName;
         }
+
+
+        /// <summary>
+        /// 加载仓库下拉框
+        /// </summary>
+        /// <param name="comboBox"></param>
+        public static void LoadComboBoxStores(ComboBox comboBox)
+        {
+            StoreBLL storeBLL = new StoreBLL();
+            List<StoreInfoModel> storeList = storeBLL.GetAllStores();
+            storeList.Insert(0, new StoreInfoModel()
+            {
+                StoreId = 0,
+                StoreName = "---请选择仓库---"
+
+            });
+            comboBox.DisplayMember = "StoreName";
+            comboBox.ValueMember = "StoreId";
+            comboBox.DataSource = storeList;
+            comboBox.SelectedIndex = 0;
+        }
+
+
+        /// <summary>
+        /// 分区状态列表
+        /// </summary>
+        /// <returns></returns>
+        public static List<RegionStateModel> RegionStateList()
+        {
+            return new List<RegionStateModel>()
+            {
+                new RegionStateModel(){ RegionState = -1,StateText = "全部"},
+                new RegionStateModel(){ RegionState = 0,StateText = "低温"},
+                new RegionStateModel(){ RegionState = 1,StateText = "正常"},
+                new RegionStateModel(){ RegionState = 2,StateText = "高温"}
+            };
+        }
+
+
 
 
 

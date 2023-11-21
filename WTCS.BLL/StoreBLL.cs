@@ -107,6 +107,76 @@ namespace WTCS.BLL
 
 
 
+        /// <summary>
+        /// 根据仓库编号获取仓库信息
+        /// </summary>
+        /// <param name="storeId"></param>
+        /// <returns></returns>
+        public StoreInfoModel GetStore(int storeId)
+        {
+            return storeDAL.GetStore(storeId);
+        }
+
+        /// <summary>
+        /// 检查是否存在相同名称或编号的仓库
+        /// </summary>
+        /// <param name="storeName"></param>
+        /// <param name="storeNo"></param>
+        /// <returns></returns>
+        public int ExistsStore(string storeName, string storeNo)
+        {
+            bool[] bls = storeDAL.ExistsStore(storeName, storeNo);
+            bool isNameExists = bls[0];
+            bool isNoExists = bls[1];
+            if (!isNameExists && !isNoExists)
+                return 0;//都不存在
+            else if (isNameExists && !isNoExists)
+                return 1;//Name存在
+            else if (!isNameExists && isNoExists)
+                return 2;//No存在
+            else
+                return 3;//都存在
+        }
+
+
+        /// <summary>
+        /// 添加至仓库  
+        /// </summary>
+        /// <param name="storeInfo"></param>
+        /// <param name="isGetId">0---代表返回  1---代表不返回</param>
+        /// <returns></returns>
+        public bool AddStore(StoreInfoModel storeInfo)
+        {
+            return storeDAL.AddStore(storeInfo, 0) > 0;
+        }
+
+        /// <summary>
+        /// 添加至仓库并返回编号
+        /// </summary>
+        /// <param name="storeInfo"></param>
+        /// <param name="isGetId">0---代表返回  1---代表不返回</param>
+        /// <returns></returns>
+        public int AddStoreGetId(StoreInfoModel storeInfo)
+        {
+            return storeDAL.AddStore(storeInfo, 1);
+        }
+
+
+        /// <summary>
+        /// 更新仓库信息 
+        /// </summary>
+        /// <param name="storeInfo"></param>
+        /// <returns></returns>
+        public bool UpdateStore(StoreInfoModel storeInfo)
+        {
+            return storeDAL.UpdateStore(storeInfo);
+        }
+
+        public List<StoreInfoModel> GetAllStores()
+        {
+            return storeDAL.GetAllStores();
+        }
+
 
     }
 }

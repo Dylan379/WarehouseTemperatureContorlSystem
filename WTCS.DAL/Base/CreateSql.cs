@@ -37,7 +37,7 @@ namespace WTCS.DAL.Base
             string sql = $"INSERT INTO [{type.GetTName()}] ({columns}) VALUES ({paraColumns})";
 
             if (isReturn == 1)
-                sql += ";select @@ identity"; //获取刚刚生成的主键值
+                sql += ";select @@identity"; //获取刚刚生成的主键值
             return new SqlModel() { Sql = sql, SqlParaArray = sqlParameters };
         }
 
