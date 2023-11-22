@@ -14,7 +14,7 @@ namespace WTCS.Models.DModels
 
     [Table("StoreRegionInfoModel")]
     [PrimaryKey("SRegionId", autoIncrement = true)]
-    class StoreRegionInfoModel
+    public class StoreRegionInfoModel
     {
         public int SRegionId { get; set; }
         public string SRegionName { get; set; }

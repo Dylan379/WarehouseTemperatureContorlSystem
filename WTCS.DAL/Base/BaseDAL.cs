@@ -184,6 +184,5 @@ namespace WTCS.DAL.Base
             }
             return SqlHelper.ExecuteTrans(comList);
         }
-
     }
 }

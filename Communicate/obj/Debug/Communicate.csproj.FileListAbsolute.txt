@@ -3,4 +3,3 @@ D:\c#workSpace\WTCS\WTCS\Communicate\bin\Debug\Communicate.pdb
 D:\c#workSpace\WTCS\WTCS\Communicate\obj\Debug\Communicate.csproj.CoreCompileInputs.cache
 D:\c#workSpace\WTCS\WTCS\Communicate\obj\Debug\Communicate.dll
 D:\c#workSpace\WTCS\WTCS\Communicate\obj\Debug\Communicate.pdb
-D:\c#workSpace\WTCS\WTCS\Communicate\obj\Debug\Communicate.csproj.AssemblyReference.cache
