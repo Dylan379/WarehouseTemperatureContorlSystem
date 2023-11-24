@@ -29,13 +29,13 @@ namespace WTCS.WTCSApp.store
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.storeRegionListDGV = new System.Windows.Forms.DataGridView();
             this.colChk = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.SRegionId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,14 +80,14 @@ namespace WTCS.WTCSApp.store
             this.storeRegionListDGV.BackgroundColor = System.Drawing.Color.White;
             this.storeRegionListDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.storeRegionListDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(155)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.storeRegionListDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.storeRegionListDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.storeRegionListDGV.ColumnHeadersHeight = 35;
             this.storeRegionListDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.storeRegionListDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -109,23 +109,24 @@ namespace WTCS.WTCSApp.store
             this.storeRegionListDGV.Location = new System.Drawing.Point(0, 122);
             this.storeRegionListDGV.Name = "storeRegionListDGV";
             this.storeRegionListDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.storeRegionListDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.storeRegionListDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.storeRegionListDGV.RowHeadersWidth = 51;
             this.storeRegionListDGV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(145)))), ((int)(((byte)(239)))));
-            this.storeRegionListDGV.RowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(145)))), ((int)(((byte)(239)))));
+            this.storeRegionListDGV.RowsDefaultCellStyle = dataGridViewCellStyle14;
             this.storeRegionListDGV.RowTemplate.Height = 27;
             this.storeRegionListDGV.Size = new System.Drawing.Size(995, 460);
             this.storeRegionListDGV.TabIndex = 3;
+            this.storeRegionListDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClickCellContent);
             // 
             // colChk
             // 
@@ -204,9 +205,9 @@ namespace WTCS.WTCSApp.store
             // 
             // colEdit
             // 
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle16.NullValue = "修改";
-            this.colEdit.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle9.NullValue = "修改";
+            this.colEdit.DefaultCellStyle = dataGridViewCellStyle9;
             this.colEdit.HeaderText = "修改";
             this.colEdit.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.colEdit.MinimumWidth = 6;
@@ -215,9 +216,9 @@ namespace WTCS.WTCSApp.store
             // 
             // colDelete
             // 
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle17.NullValue = "删除";
-            this.colDelete.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle10.NullValue = "删除";
+            this.colDelete.DefaultCellStyle = dataGridViewCellStyle10;
             this.colDelete.HeaderText = "删除";
             this.colDelete.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.colDelete.MinimumWidth = 6;
@@ -226,9 +227,9 @@ namespace WTCS.WTCSApp.store
             // 
             // colRecover
             // 
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle18.NullValue = "恢复";
-            this.colRecover.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle11.NullValue = "恢复";
+            this.colRecover.DefaultCellStyle = dataGridViewCellStyle11;
             this.colRecover.HeaderText = "恢复";
             this.colRecover.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.colRecover.MinimumWidth = 6;
@@ -237,9 +238,9 @@ namespace WTCS.WTCSApp.store
             // 
             // colRemove
             // 
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle19.NullValue = "移除";
-            this.colRemove.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle12.NullValue = "移除";
+            this.colRemove.DefaultCellStyle = dataGridViewCellStyle12;
             this.colRemove.HeaderText = "移除";
             this.colRemove.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.colRemove.MinimumWidth = 6;
@@ -400,6 +401,7 @@ namespace WTCS.WTCSApp.store
             this.creatBtn.TabIndex = 0;
             this.creatBtn.Text = "新增";
             this.creatBtn.UseVisualStyleBackColor = false;
+            this.creatBtn.Click += new System.EventHandler(this.ClickCreatBtn);
             // 
             // uPanel1
             // 

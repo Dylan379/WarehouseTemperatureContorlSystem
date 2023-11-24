@@ -12,7 +12,7 @@ namespace WTCS.Models.DModels
     /// </summary>
     /// 
 
-    [Table("StoreRegionInfoModel")]
+    [Table("StoreRegionInfos")]
     [PrimaryKey("SRegionId", autoIncrement = true)]
     public class StoreRegionInfoModel
     {

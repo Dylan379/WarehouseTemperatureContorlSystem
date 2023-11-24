@@ -164,8 +164,8 @@ namespace WTCS.WTCSApp.store
         private void DealWithStore(StoreInfoModel storeInfoModel, int code)
         {
             string InfoName = "仓库信息";
-            string msgTitle = $"{InfoName}删除";
             string delName = FormUtility.GetDelName(code);
+            string msgTitle = $"{InfoName}{delName}";
             DialogResult dialogResult = MsgBoxHelper.MsgBoxConfirm(msgTitle, $"您确定要{delName}该{InfoName}信息吗?");
             if (dialogResult == DialogResult.Yes)
             {

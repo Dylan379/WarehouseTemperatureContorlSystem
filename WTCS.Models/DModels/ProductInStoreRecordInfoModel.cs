@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.CustomAttributes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,9 @@ namespace WTCS.Models.DModels
     /// <summary>
     /// 产品入库记录信息实体
     /// </summary>
+    /// 
+    [Table("ProductInStoreRecordInfos")]
+    [PrimaryKey("RecordId", autoIncrement = true)]
     class ProductInStoreRecordInfoModel
     {
         public int RecordId { get; set; }

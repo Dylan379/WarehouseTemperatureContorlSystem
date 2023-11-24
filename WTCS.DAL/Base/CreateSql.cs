@@ -97,7 +97,7 @@ namespace WTCS.DAL.Base
             Type type = typeof(T);
             string sql = $"DELETE FROM [{type.GetTName()}] WHERE 1=1";
             if (string.IsNullOrEmpty(strWhere))
-                sql += "1=1";
+                sql += " 1=1 ";
             else
                 sql += strWhere;
             return sql;
@@ -115,7 +115,7 @@ namespace WTCS.DAL.Base
             Type type = typeof(T);
             string sql = $"UPDATE [{type.GetTName()}] SET IsDeleted={isDelete} WHERE 1=1";
             if (!string.IsNullOrEmpty(strWhere))
-                sql += "and" + strWhere;
+                sql += " and " + strWhere;
             return sql;
         }
 

@@ -70,7 +70,7 @@ namespace WTCS.DAL
             if (isDeleted >= 0)
                 delFlag = "-";
             //修改分区数的sql语句
-            string updateSql = $"update StoreInfos set RegionCount{delFlag}1 where StoreId=" + storeId;
+            string updateSql = $"update StoreInfos set RegionCount=RegionCount{delFlag}1 where StoreId=" + storeId;
 
             sqlList.Add(delSql);
             sqlList.Add(updateSql);
