@@ -95,7 +95,7 @@ namespace WTCS.DAL.Base
         public static string CreatDeleteSql<T>(string strWhere)
         {
             Type type = typeof(T);
-            string sql = $"DELETE FROM [{type.GetTName()}] WHERE 1=1";
+            string sql = $"DELETE FROM [{type.GetTName()}] WHERE 1=1 and";
             if (string.IsNullOrEmpty(strWhere))
                 sql += " 1=1 ";
             else

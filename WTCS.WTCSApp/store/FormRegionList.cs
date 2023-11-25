@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WTCS.BLL;
+using WTCS.Models.DModels;
 using WTCS.Models.VModels;
 using WTCS.WTCSApp.FModels;
 
@@ -144,7 +145,7 @@ namespace WTCS.WTCSApp.store
                         }
                         else if (res == 2)
                         {
-                            MsgBoxHelper.MsgErrorShow(msgTitle, $"该仓库已添加产品,不能删!除");
+                            MsgBoxHelper.MsgErrorShow(msgTitle, $"该仓库已添加产品,不能删除!");
                             return;
                         }
                         else
@@ -201,6 +202,75 @@ namespace WTCS.WTCSApp.store
         private void ClickCreatBtn(object sender, EventArgs e)
         {
             ShowStoreRegionInfoPage(1, 0);
+        }
+
+        /// <summary>
+        /// 批量删除仓库信息
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClickDeleteBtn(object sender, EventArgs e)
+        {
+            //删除行的编号集合
+            List<StoreRegionInfoModel> delRegions = new List<StoreRegionInfoModel>();
+
+            foreach (DataGridViewRow dr in storeRegionListDGV.Rows)
+            {
+                ViewStoreRegionInfo region = dr.DataBoundItem as ViewStoreRegionInfo;
+                DataGridViewCheckBoxCell checkBoxCell = dr.Cells["colChk"] as DataGridViewCheckBoxCell;
+
+                if (checkBoxCell.FormattedValue.ToString() == "True")
+                {
+                    delRegions.Add(new StoreRegionInfoModel() { SRegionId = region.SRegionId, StoreId = region.StoreId });
+                }
+
+            }
+
+            if (delRegions.Count > 0)
+            {
+                DialogResult dialogResult = MsgBoxHelper.MsgBoxConfirm("分区信息删除", "您确定要删除选择的分区信息吗?");
+                if (dialogResult == DialogResult.Yes)
+                {
+                    string res = srBLL.LogicDeleteStoreRegion(delRegions);
+
+                    //成功
+                    if (res == "Y")
+                    {
+                        MsgBoxHelper.MsgBoxShow("分区删除信息", "成功删除选择的分区信息");
+                        FindStoreRegionList();
+                    }
+                    else if (res.Length >= 1 && (res != "Y" || res != "0"))//存在分区
+                    {
+                        MsgBoxHelper.MsgErrorShow("分区删除信息", "不能删除仍包含产品的分区,请检查" + res);
+                        return;
+                    }
+                    else  //失败
+                    {
+                        MsgBoxHelper.MsgErrorShow("分区删除信息", "删除失败!");
+                        return;
+                    }
+
+                }
+            }
+            else
+            {
+                MsgBoxHelper.MsgErrorShow("分区信息删除", "请选择要删除的分区信息");
+            }
+
+        }
+
+        /// <summary>
+        /// 点击刷新按钮事件处理
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClickFlashBtn(object sender, EventArgs e)
+        {
+            storeComboBox.SelectedIndex = 0;
+            stateComboBox.SelectedIndex = 0;
+            keyWordsInput.Clear();
+            isDeletedCheck.Checked = false;
+            FindStoreRegionList();
         }
     }
 }

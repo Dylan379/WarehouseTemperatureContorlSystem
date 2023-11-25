@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -64,6 +65,7 @@ namespace WTCS.WTCSApp.store
                         resetBtn.Enabled = false;
                         GetRegionInfo();
                         Text += "---修改";
+                        saveBtn.Text = "修改";
                         break;
                     case 3:
                         TemperPanel.Visible = false;
@@ -118,11 +120,180 @@ namespace WTCS.WTCSApp.store
             regionNameInput.Clear();
             regionRemarkInput.Clear();
             storeNameComboBox.SelectedIndex = 0;
-            actType = 1;
+            if (actType == 3)
+            {
+                storeNameComboBox.SelectedValue = fInfo.FId;
+            }
+            // actType = 1;
             oldName = "";
             oldNo = "";
             oldStoreId = 0;
 
+        }
+
+        private void ClickSaveBtn(object sender, EventArgs e)
+        {
+            //信息接收
+            string msgTitle = "分区信息提交";
+            string regionName = regionNameInput.Text.Trim();
+            string regionNo = regionNoInput.Text.Trim();
+            int storeId = storeNameComboBox.SelectedValue.GetInt();
+            decimal? currentTemperature = null;
+            if (!string.IsNullOrEmpty(currentTemperatureInput.Text))
+                currentTemperature = currentTemperatureInput.Text.GetDecimal();
+            decimal? lowestTemperature = null, highestTemperature = null;
+            int regionTemperState = 1;
+            if (actType == 2)
+            {
+                if (!string.IsNullOrEmpty(allowLowestTemperInput.Text))
+                    lowestTemperature = allowLowestTemperInput.Text.GetDecimal();
+                if (!string.IsNullOrEmpty(allowHighestTemperInput.Text))
+                    highestTemperature = allowHighestTemperInput.Text.GetDecimal();
+                if (lowestTemperature != null &&
+                    highestTemperature != null &&
+                    lowestTemperature > highestTemperature)
+                {
+                    MsgBoxHelper.MsgErrorShow(msgTitle, "温度信息设置异常,请检查");
+                    allowLowestTemperInput.Focus();
+                    return;
+                }
+                else if (lowestTemperature != null &&
+                        currentTemperature != null &&
+                        lowestTemperature > currentTemperature)
+                {
+                    regionTemperState = 0;//低温状态
+                }
+                else if (highestTemperature != null &&
+                        currentTemperature != null &&
+                        currentTemperature > highestTemperature)
+                {
+                    regionTemperState = 2;//高温状态
+                }
+            }
+            string remark = regionRemarkInput.Text.Trim();
+
+
+            if (string.IsNullOrEmpty(regionName))
+            {
+                MsgBoxHelper.MsgErrorShow(msgTitle, "分区名称不能为空!");
+                regionNameInput.Focus();
+                return;
+            }
+            if (storeId == 0)
+            {
+                MsgBoxHelper.MsgErrorShow(msgTitle, "请选择所属仓库!");
+                storeNameComboBox.Focus();
+                return;
+            }
+            //判断数据存在性
+            //新增   或   修改
+            if (regionId == 0 || (regionId > 0 && (oldName != regionName || oldNo != regionNo)))
+            {
+                int intBl;
+                if (regionId > 0)
+                {
+                    if (oldName == regionName)
+                        intBl = srBLL.ExistsStore("", regionNo);
+                    else if (oldNo == regionNo)
+                        intBl = srBLL.ExistsStore(regionName, "");
+                    else
+                        intBl = srBLL.ExistsStore(regionName, regionNo);
+                }
+                else
+                    intBl = srBLL.ExistsStore(regionName, regionNo);
+                switch (intBl)
+                {
+                    case 1://Name存在
+                        MsgBoxHelper.MsgErrorShow(msgTitle, "存在相同名称的分区，请检查！");
+                        return;
+                    case 2://No存在
+                        MsgBoxHelper.MsgErrorShow(msgTitle, "存在相同编号的分区，请检查！");
+                        return;
+                    case 3://都存在
+                        MsgBoxHelper.MsgErrorShow(msgTitle, "该分区已存在，请检查！");
+                        return;
+                    case 0:
+                        break;
+                }
+                if (intBl > 0)
+                    return;
+            }
+            //分区信息封装
+            StoreRegionInfoModel storeRegionInfo = new StoreRegionInfoModel()
+            {
+                SRegionId = regionId,
+                SRegionName = regionName,
+                SRegionNo = regionNo,
+                SRTemperature = currentTemperature,
+                Remark = remark,
+                StoreId = storeId,
+                TemperState = regionTemperState
+            };
+            if (actType == 2)
+            {
+                if (lowestTemperature != null)
+                    storeRegionInfo.AllowLowestTemperature = lowestTemperature;
+                if (highestTemperature != null)
+                    storeRegionInfo.AllowHighestTemperature = highestTemperature;
+            }
+
+            //提交
+            bool saveState = false;
+            if (actType == 1 || actType == 3)
+            {
+                int newRegionId = srBLL.AddStoreRegionWithId(storeRegionInfo);//新分区编号
+                if (newRegionId > 0)
+                {
+                    saveState = true;
+                    regionId = newRegionId;
+
+                }
+            }
+            else//修改
+            {
+                if (storeId != oldStoreId)
+                    saveState = srBLL.UpdateStoreRegion(storeRegionInfo, oldStoreId);
+                else
+                    saveState = srBLL.UpdateStoreRegion(storeRegionInfo);
+            }
+
+            string actName = actType != 2 ? "新增" : "修改";
+            if (saveState)
+            {
+                MsgBoxHelper.MsgBoxShow(msgTitle, $"{regionName}仓库分区信息{actName}成功!");
+                if (actType == 1)
+                {
+                    actType = 2;
+                    saveBtn.Text = "修改";
+                    oldName = regionName;
+                    oldNo = regionNo;
+                }
+                if (actType == 3)
+                {
+                    ReLoadStoreList?.Invoke();
+                }
+                else
+                {
+                    ReLoadList?.Invoke();
+                }
+            }
+            else
+            {
+                MsgBoxHelper.MsgErrorShow(msgTitle, $"{regionName}仓库分区信息{actName}失败!");
+                return;
+            }
+
+
+        }
+
+        private void ClickResetBtn(object sender, EventArgs e)
+        {
+            ResetInputs();
+        }
+
+        private void ClickBackBtn(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

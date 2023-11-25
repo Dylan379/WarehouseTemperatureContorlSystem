@@ -58,7 +58,7 @@ namespace WTCS.DAL
         private List<string> GetDelRegionSqlList(int regionId, int storeId, int delType, int isDeleted)
         {
             List<string> sqlList = new List<string>();
-            string strWhere = $"SRegionId={regionId}";
+            string strWhere = $" SRegionId={regionId}";
             string delFlag = "+";
             string delSql;
             if (delType == 1)
@@ -67,10 +67,10 @@ namespace WTCS.DAL
             {
                 delSql = CreateSql.CreatLogicDeleteSql<StoreRegionInfoModel>(strWhere, isDeleted);
             }
-            if (isDeleted >= 0)
+            if (isDeleted > 0)
                 delFlag = "-";
             //修改分区数的sql语句
-            string updateSql = $"update StoreInfos set RegionCount=RegionCount{delFlag}1 where StoreId=" + storeId;
+            string updateSql = $"update StoreInfos set RegionCount = RegionCount {delFlag} 1 where StoreId=" + storeId;
 
             sqlList.Add(delSql);
             sqlList.Add(updateSql);
@@ -159,7 +159,7 @@ namespace WTCS.DAL
                         cmd.ExecuteNonQuery();
                     }
                     cmd.Transaction.Commit();
-                    return 0;
+                    return res;
                 }
                 catch (SqlException ex)
                 {
@@ -198,12 +198,12 @@ namespace WTCS.DAL
                    if (res > 0 && oldStoreId > 0)
                    {
                        //修改仓库分区数
-                       string updateSql = "update StoreInfos set RegionCount=RegionCount+1 where StoreId=" +
+                       string updateSql = "update StoreInfos set RegionCount = RegionCount+1 where StoreId=" +
                                           storeRegionInfo.StoreId;
                        cmd.CommandText = updateSql;
                        cmd.ExecuteNonQuery();
                        //修改仓库分区数
-                       string oldUpdateSql = "update StoreInfos set RegionCount=RegionCount-1 where StoreId=" +
+                       string oldUpdateSql = "update StoreInfos set RegionCount = RegionCount-1 where StoreId = " +
                                           oldStoreId;
                        cmd.CommandText = oldUpdateSql;
                        cmd.ExecuteNonQuery();

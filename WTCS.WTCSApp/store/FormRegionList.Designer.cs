@@ -29,27 +29,14 @@ namespace WTCS.WTCSApp.store
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.storeRegionListDGV = new System.Windows.Forms.DataGridView();
-            this.colChk = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.SRegionId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SRegionName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StoreName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SRegionNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SRTemperature = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AllowLowestTemperature = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AllowHighestTemperature = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TemperState = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEdit = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.colDelete = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.colRecover = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.colRemove = new System.Windows.Forms.DataGridViewLinkColumn();
             this.uPanel2 = new WTCS.WTCSApp.UControls.UPanel();
             this.stateComboBox = new System.Windows.Forms.ComboBox();
             this.storeComboBox = new System.Windows.Forms.ComboBox();
@@ -65,6 +52,19 @@ namespace WTCS.WTCSApp.store
             this.panel1 = new System.Windows.Forms.Panel();
             this.flashBtn = new WTCS.WTCSApp.UControls.UCircleButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.colChk = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.SRegionId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SRegionName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StoreName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SRegionNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SRTemperature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AllowLowestTemperature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AllowHighestTemperature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TemperStateText = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEdit = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.colDelete = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.colRecover = new System.Windows.Forms.DataGridViewLinkColumn();
+            this.colRemove = new System.Windows.Forms.DataGridViewLinkColumn();
             ((System.ComponentModel.ISupportInitialize)(this.storeRegionListDGV)).BeginInit();
             this.uPanel2.SuspendLayout();
             this.uPanel1.SuspendLayout();
@@ -80,14 +80,14 @@ namespace WTCS.WTCSApp.store
             this.storeRegionListDGV.BackgroundColor = System.Drawing.Color.White;
             this.storeRegionListDGV.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.storeRegionListDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(155)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.storeRegionListDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.storeRegionListDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.storeRegionListDGV.ColumnHeadersHeight = 35;
             this.storeRegionListDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.storeRegionListDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -99,7 +99,7 @@ namespace WTCS.WTCSApp.store
             this.SRTemperature,
             this.AllowLowestTemperature,
             this.AllowHighestTemperature,
-            this.TemperState,
+            this.TemperStateText,
             this.colEdit,
             this.colDelete,
             this.colRecover,
@@ -109,143 +109,24 @@ namespace WTCS.WTCSApp.store
             this.storeRegionListDGV.Location = new System.Drawing.Point(0, 122);
             this.storeRegionListDGV.Name = "storeRegionListDGV";
             this.storeRegionListDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.storeRegionListDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.storeRegionListDGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.storeRegionListDGV.RowHeadersWidth = 51;
             this.storeRegionListDGV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(145)))), ((int)(((byte)(239)))));
-            this.storeRegionListDGV.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(145)))), ((int)(((byte)(239)))));
+            this.storeRegionListDGV.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.storeRegionListDGV.RowTemplate.Height = 27;
             this.storeRegionListDGV.Size = new System.Drawing.Size(995, 460);
             this.storeRegionListDGV.TabIndex = 3;
             this.storeRegionListDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClickCellContent);
-            // 
-            // colChk
-            // 
-            this.colChk.FillWeight = 80F;
-            this.colChk.HeaderText = "选择";
-            this.colChk.MinimumWidth = 6;
-            this.colChk.Name = "colChk";
-            // 
-            // SRegionId
-            // 
-            this.SRegionId.DataPropertyName = "SRegionId";
-            this.SRegionId.FillWeight = 80F;
-            this.SRegionId.HeaderText = "编号";
-            this.SRegionId.MinimumWidth = 6;
-            this.SRegionId.Name = "SRegionId";
-            this.SRegionId.ReadOnly = true;
-            // 
-            // SRegionName
-            // 
-            this.SRegionName.DataPropertyName = "SRegionName";
-            this.SRegionName.HeaderText = "分区名";
-            this.SRegionName.MinimumWidth = 6;
-            this.SRegionName.Name = "SRegionName";
-            this.SRegionName.ReadOnly = true;
-            // 
-            // StoreName
-            // 
-            this.StoreName.DataPropertyName = "StoreName";
-            this.StoreName.FillWeight = 150F;
-            this.StoreName.HeaderText = "仓库名称";
-            this.StoreName.MinimumWidth = 6;
-            this.StoreName.Name = "StoreName";
-            this.StoreName.ReadOnly = true;
-            // 
-            // SRegionNo
-            // 
-            this.SRegionNo.DataPropertyName = "SRegionNo";
-            this.SRegionNo.FillWeight = 80F;
-            this.SRegionNo.HeaderText = "编码";
-            this.SRegionNo.MinimumWidth = 6;
-            this.SRegionNo.Name = "SRegionNo";
-            this.SRegionNo.ReadOnly = true;
-            // 
-            // SRTemperature
-            // 
-            this.SRTemperature.DataPropertyName = "SRTemperature";
-            this.SRTemperature.FillWeight = 180F;
-            this.SRTemperature.HeaderText = "室内温度";
-            this.SRTemperature.MinimumWidth = 6;
-            this.SRTemperature.Name = "SRTemperature";
-            this.SRTemperature.ReadOnly = true;
-            // 
-            // AllowLowestTemperature
-            // 
-            this.AllowLowestTemperature.DataPropertyName = "AllowLowestTemperature";
-            this.AllowLowestTemperature.HeaderText = "低温";
-            this.AllowLowestTemperature.MinimumWidth = 6;
-            this.AllowLowestTemperature.Name = "AllowLowestTemperature";
-            this.AllowLowestTemperature.ReadOnly = true;
-            // 
-            // AllowHighestTemperature
-            // 
-            this.AllowHighestTemperature.DataPropertyName = "AllowHighestTemperature";
-            this.AllowHighestTemperature.HeaderText = "高温";
-            this.AllowHighestTemperature.MinimumWidth = 6;
-            this.AllowHighestTemperature.Name = "AllowHighestTemperature";
-            this.AllowHighestTemperature.ReadOnly = true;
-            // 
-            // TemperState
-            // 
-            this.TemperState.DataPropertyName = "TemperState";
-            this.TemperState.HeaderText = "状态";
-            this.TemperState.MinimumWidth = 6;
-            this.TemperState.Name = "TemperState";
-            this.TemperState.ReadOnly = true;
-            // 
-            // colEdit
-            // 
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle9.NullValue = "修改";
-            this.colEdit.DefaultCellStyle = dataGridViewCellStyle9;
-            this.colEdit.HeaderText = "修改";
-            this.colEdit.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.colEdit.MinimumWidth = 6;
-            this.colEdit.Name = "colEdit";
-            this.colEdit.TrackVisitedState = false;
-            // 
-            // colDelete
-            // 
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle10.NullValue = "删除";
-            this.colDelete.DefaultCellStyle = dataGridViewCellStyle10;
-            this.colDelete.HeaderText = "删除";
-            this.colDelete.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.colDelete.MinimumWidth = 6;
-            this.colDelete.Name = "colDelete";
-            this.colDelete.TrackVisitedState = false;
-            // 
-            // colRecover
-            // 
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle11.NullValue = "恢复";
-            this.colRecover.DefaultCellStyle = dataGridViewCellStyle11;
-            this.colRecover.HeaderText = "恢复";
-            this.colRecover.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.colRecover.MinimumWidth = 6;
-            this.colRecover.Name = "colRecover";
-            this.colRecover.TrackVisitedState = false;
-            // 
-            // colRemove
-            // 
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle12.NullValue = "移除";
-            this.colRemove.DefaultCellStyle = dataGridViewCellStyle12;
-            this.colRemove.HeaderText = "移除";
-            this.colRemove.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.colRemove.MinimumWidth = 6;
-            this.colRemove.Name = "colRemove";
-            this.colRemove.TrackVisitedState = false;
             // 
             // uPanel2
             // 
@@ -350,6 +231,7 @@ namespace WTCS.WTCSApp.store
             this.deleteBtn.TabIndex = 4;
             this.deleteBtn.Text = "删除";
             this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.ClickDeleteBtn);
             // 
             // searchBtn
             // 
@@ -449,6 +331,7 @@ namespace WTCS.WTCSApp.store
             this.flashBtn.TabIndex = 1;
             this.flashBtn.Text = "刷新";
             this.flashBtn.UseVisualStyleBackColor = false;
+            this.flashBtn.Click += new System.EventHandler(this.ClickFlashBtn);
             // 
             // label1
             // 
@@ -461,6 +344,125 @@ namespace WTCS.WTCSApp.store
             this.label1.Size = new System.Drawing.Size(172, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "仓库分区管理页面";
+            // 
+            // colChk
+            // 
+            this.colChk.FillWeight = 80F;
+            this.colChk.HeaderText = "选择";
+            this.colChk.MinimumWidth = 6;
+            this.colChk.Name = "colChk";
+            // 
+            // SRegionId
+            // 
+            this.SRegionId.DataPropertyName = "SRegionId";
+            this.SRegionId.FillWeight = 80F;
+            this.SRegionId.HeaderText = "编号";
+            this.SRegionId.MinimumWidth = 6;
+            this.SRegionId.Name = "SRegionId";
+            this.SRegionId.ReadOnly = true;
+            // 
+            // SRegionName
+            // 
+            this.SRegionName.DataPropertyName = "SRegionName";
+            this.SRegionName.HeaderText = "分区名";
+            this.SRegionName.MinimumWidth = 6;
+            this.SRegionName.Name = "SRegionName";
+            this.SRegionName.ReadOnly = true;
+            // 
+            // StoreName
+            // 
+            this.StoreName.DataPropertyName = "StoreName";
+            this.StoreName.FillWeight = 150F;
+            this.StoreName.HeaderText = "仓库名称";
+            this.StoreName.MinimumWidth = 6;
+            this.StoreName.Name = "StoreName";
+            this.StoreName.ReadOnly = true;
+            // 
+            // SRegionNo
+            // 
+            this.SRegionNo.DataPropertyName = "SRegionNo";
+            this.SRegionNo.FillWeight = 80F;
+            this.SRegionNo.HeaderText = "编码";
+            this.SRegionNo.MinimumWidth = 6;
+            this.SRegionNo.Name = "SRegionNo";
+            this.SRegionNo.ReadOnly = true;
+            // 
+            // SRTemperature
+            // 
+            this.SRTemperature.DataPropertyName = "SRTemperature";
+            this.SRTemperature.FillWeight = 180F;
+            this.SRTemperature.HeaderText = "室内温度";
+            this.SRTemperature.MinimumWidth = 6;
+            this.SRTemperature.Name = "SRTemperature";
+            this.SRTemperature.ReadOnly = true;
+            // 
+            // AllowLowestTemperature
+            // 
+            this.AllowLowestTemperature.DataPropertyName = "AllowLowestTemperature";
+            this.AllowLowestTemperature.HeaderText = "低温";
+            this.AllowLowestTemperature.MinimumWidth = 6;
+            this.AllowLowestTemperature.Name = "AllowLowestTemperature";
+            this.AllowLowestTemperature.ReadOnly = true;
+            // 
+            // AllowHighestTemperature
+            // 
+            this.AllowHighestTemperature.DataPropertyName = "AllowHighestTemperature";
+            this.AllowHighestTemperature.HeaderText = "高温";
+            this.AllowHighestTemperature.MinimumWidth = 6;
+            this.AllowHighestTemperature.Name = "AllowHighestTemperature";
+            this.AllowHighestTemperature.ReadOnly = true;
+            // 
+            // TemperStateText
+            // 
+            this.TemperStateText.DataPropertyName = "TemperStateText";
+            this.TemperStateText.HeaderText = "状态";
+            this.TemperStateText.MinimumWidth = 6;
+            this.TemperStateText.Name = "TemperStateText";
+            this.TemperStateText.ReadOnly = true;
+            // 
+            // colEdit
+            // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.NullValue = "修改";
+            this.colEdit.DefaultCellStyle = dataGridViewCellStyle2;
+            this.colEdit.HeaderText = "修改";
+            this.colEdit.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.colEdit.MinimumWidth = 6;
+            this.colEdit.Name = "colEdit";
+            this.colEdit.TrackVisitedState = false;
+            // 
+            // colDelete
+            // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.NullValue = "删除";
+            this.colDelete.DefaultCellStyle = dataGridViewCellStyle3;
+            this.colDelete.HeaderText = "删除";
+            this.colDelete.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.colDelete.MinimumWidth = 6;
+            this.colDelete.Name = "colDelete";
+            this.colDelete.TrackVisitedState = false;
+            // 
+            // colRecover
+            // 
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.NullValue = "恢复";
+            this.colRecover.DefaultCellStyle = dataGridViewCellStyle4;
+            this.colRecover.HeaderText = "恢复";
+            this.colRecover.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.colRecover.MinimumWidth = 6;
+            this.colRecover.Name = "colRecover";
+            this.colRecover.TrackVisitedState = false;
+            // 
+            // colRemove
+            // 
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.NullValue = "移除";
+            this.colRemove.DefaultCellStyle = dataGridViewCellStyle5;
+            this.colRemove.HeaderText = "移除";
+            this.colRemove.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.colRemove.MinimumWidth = 6;
+            this.colRemove.Name = "colRemove";
+            this.colRemove.TrackVisitedState = false;
             // 
             // FormRegionList
             // 
@@ -511,7 +513,7 @@ namespace WTCS.WTCSApp.store
         private System.Windows.Forms.DataGridViewTextBoxColumn SRTemperature;
         private System.Windows.Forms.DataGridViewTextBoxColumn AllowLowestTemperature;
         private System.Windows.Forms.DataGridViewTextBoxColumn AllowHighestTemperature;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TemperState;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TemperStateText;
         private System.Windows.Forms.DataGridViewLinkColumn colEdit;
         private System.Windows.Forms.DataGridViewLinkColumn colDelete;
         private System.Windows.Forms.DataGridViewLinkColumn colRecover;

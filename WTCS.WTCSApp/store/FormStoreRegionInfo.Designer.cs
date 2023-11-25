@@ -32,9 +32,16 @@ namespace WTCS.WTCSApp.store
             this.panel1 = new System.Windows.Forms.Panel();
             this.backBtn = new WTCS.WTCSApp.UControls.UCircleButton();
             this.storeInfoGroup = new System.Windows.Forms.GroupBox();
-            this.resetBtn = new System.Windows.Forms.Button();
-            this.saveBtn = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.regionRemarkInput = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TemperPanel = new System.Windows.Forms.Panel();
+            this.allowHighestTemperInput = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.allowLowestTemperInput = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.storeNameComboBox = new System.Windows.Forms.ComboBox();
             this.currentTemperatureInput = new System.Windows.Forms.TextBox();
             this.regionNoInput = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,20 +49,13 @@ namespace WTCS.WTCSApp.store
             this.regionNameInput = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.TemperPanel = new System.Windows.Forms.Panel();
-            this.allowHighestTemperInput = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.allowLowestTemperInput = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.regionRemarkInput = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.storeNameComboBox = new System.Windows.Forms.ComboBox();
+            this.resetBtn = new System.Windows.Forms.Button();
+            this.saveBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.storeInfoGroup.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.TemperPanel.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.TemperPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -87,6 +87,7 @@ namespace WTCS.WTCSApp.store
             this.backBtn.TabIndex = 0;
             this.backBtn.Text = "返回";
             this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.ClickBackBtn);
             // 
             // storeInfoGroup
             // 
@@ -103,33 +104,77 @@ namespace WTCS.WTCSApp.store
             this.storeInfoGroup.TabStop = false;
             this.storeInfoGroup.Text = "仓库分区信息";
             // 
-            // resetBtn
+            // panel4
             // 
-            this.resetBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(188)))));
-            this.resetBtn.FlatAppearance.BorderSize = 0;
-            this.resetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.resetBtn.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.resetBtn.ForeColor = System.Drawing.Color.White;
-            this.resetBtn.Location = new System.Drawing.Point(419, 487);
-            this.resetBtn.Name = "resetBtn";
-            this.resetBtn.Size = new System.Drawing.Size(64, 33);
-            this.resetBtn.TabIndex = 7;
-            this.resetBtn.Text = "清空";
-            this.resetBtn.UseVisualStyleBackColor = false;
+            this.panel4.Controls.Add(this.regionRemarkInput);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(3, 213);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(686, 174);
+            this.panel4.TabIndex = 8;
             // 
-            // saveBtn
+            // regionRemarkInput
             // 
-            this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
-            this.saveBtn.FlatAppearance.BorderSize = 0;
-            this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveBtn.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.saveBtn.ForeColor = System.Drawing.Color.White;
-            this.saveBtn.Location = new System.Drawing.Point(258, 487);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(64, 33);
-            this.saveBtn.TabIndex = 6;
-            this.saveBtn.Text = " 保存";
-            this.saveBtn.UseVisualStyleBackColor = false;
+            this.regionRemarkInput.Location = new System.Drawing.Point(134, 20);
+            this.regionRemarkInput.Multiline = true;
+            this.regionRemarkInput.Name = "regionRemarkInput";
+            this.regionRemarkInput.Size = new System.Drawing.Size(494, 145);
+            this.regionRemarkInput.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(25, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 20);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "分区描述:";
+            // 
+            // TemperPanel
+            // 
+            this.TemperPanel.Controls.Add(this.allowHighestTemperInput);
+            this.TemperPanel.Controls.Add(this.label7);
+            this.TemperPanel.Controls.Add(this.label6);
+            this.TemperPanel.Controls.Add(this.allowLowestTemperInput);
+            this.TemperPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TemperPanel.Location = new System.Drawing.Point(3, 123);
+            this.TemperPanel.Name = "TemperPanel";
+            this.TemperPanel.Size = new System.Drawing.Size(686, 90);
+            this.TemperPanel.TabIndex = 7;
+            this.TemperPanel.Visible = false;
+            // 
+            // allowHighestTemperInput
+            // 
+            this.allowHighestTemperInput.Location = new System.Drawing.Point(472, 35);
+            this.allowHighestTemperInput.Name = "allowHighestTemperInput";
+            this.allowHighestTemperInput.Size = new System.Drawing.Size(189, 27);
+            this.allowHighestTemperInput.TabIndex = 21;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(25, 38);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(88, 20);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "允许低温值:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(363, 38);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(88, 20);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "允许高温值:";
+            // 
+            // allowLowestTemperInput
+            // 
+            this.allowLowestTemperInput.Location = new System.Drawing.Point(134, 35);
+            this.allowLowestTemperInput.Name = "allowLowestTemperInput";
+            this.allowLowestTemperInput.Size = new System.Drawing.Size(185, 27);
+            this.allowLowestTemperInput.TabIndex = 19;
             // 
             // panel2
             // 
@@ -146,6 +191,14 @@ namespace WTCS.WTCSApp.store
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(686, 100);
             this.panel2.TabIndex = 6;
+            // 
+            // storeNameComboBox
+            // 
+            this.storeNameComboBox.FormattingEnabled = true;
+            this.storeNameComboBox.Location = new System.Drawing.Point(134, 60);
+            this.storeNameComboBox.Name = "storeNameComboBox";
+            this.storeNameComboBox.Size = new System.Drawing.Size(185, 28);
+            this.storeNameComboBox.TabIndex = 18;
             // 
             // currentTemperatureInput
             // 
@@ -204,85 +257,35 @@ namespace WTCS.WTCSApp.store
             this.label1.TabIndex = 10;
             this.label1.Text = "分区名称:";
             // 
-            // TemperPanel
+            // resetBtn
             // 
-            this.TemperPanel.Controls.Add(this.allowHighestTemperInput);
-            this.TemperPanel.Controls.Add(this.label7);
-            this.TemperPanel.Controls.Add(this.label6);
-            this.TemperPanel.Controls.Add(this.allowLowestTemperInput);
-            this.TemperPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TemperPanel.Location = new System.Drawing.Point(3, 123);
-            this.TemperPanel.Name = "TemperPanel";
-            this.TemperPanel.Size = new System.Drawing.Size(686, 90);
-            this.TemperPanel.TabIndex = 7;
-            this.TemperPanel.Visible = false;
+            this.resetBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(188)))));
+            this.resetBtn.FlatAppearance.BorderSize = 0;
+            this.resetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.resetBtn.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.resetBtn.ForeColor = System.Drawing.Color.White;
+            this.resetBtn.Location = new System.Drawing.Point(419, 487);
+            this.resetBtn.Name = "resetBtn";
+            this.resetBtn.Size = new System.Drawing.Size(64, 33);
+            this.resetBtn.TabIndex = 7;
+            this.resetBtn.Text = "清空";
+            this.resetBtn.UseVisualStyleBackColor = false;
+            this.resetBtn.Click += new System.EventHandler(this.ClickResetBtn);
             // 
-            // allowHighestTemperInput
+            // saveBtn
             // 
-            this.allowHighestTemperInput.Location = new System.Drawing.Point(472, 35);
-            this.allowHighestTemperInput.Name = "allowHighestTemperInput";
-            this.allowHighestTemperInput.Size = new System.Drawing.Size(189, 27);
-            this.allowHighestTemperInput.TabIndex = 21;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(363, 38);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 20);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "允许高温值:";
-            // 
-            // allowLowestTemperInput
-            // 
-            this.allowLowestTemperInput.Location = new System.Drawing.Point(134, 35);
-            this.allowLowestTemperInput.Name = "allowLowestTemperInput";
-            this.allowLowestTemperInput.Size = new System.Drawing.Size(185, 27);
-            this.allowLowestTemperInput.TabIndex = 19;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(25, 38);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 20);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "允许低温值:";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.regionRemarkInput);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 213);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(686, 174);
-            this.panel4.TabIndex = 8;
-            // 
-            // regionRemarkInput
-            // 
-            this.regionRemarkInput.Location = new System.Drawing.Point(134, 20);
-            this.regionRemarkInput.Multiline = true;
-            this.regionRemarkInput.Name = "regionRemarkInput";
-            this.regionRemarkInput.Size = new System.Drawing.Size(494, 145);
-            this.regionRemarkInput.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 20);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "分区描述:";
-            // 
-            // storeNameComboBox
-            // 
-            this.storeNameComboBox.FormattingEnabled = true;
-            this.storeNameComboBox.Location = new System.Drawing.Point(134, 60);
-            this.storeNameComboBox.Name = "storeNameComboBox";
-            this.storeNameComboBox.Size = new System.Drawing.Size(185, 28);
-            this.storeNameComboBox.TabIndex = 18;
+            this.saveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
+            this.saveBtn.FlatAppearance.BorderSize = 0;
+            this.saveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveBtn.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.saveBtn.ForeColor = System.Drawing.Color.White;
+            this.saveBtn.Location = new System.Drawing.Point(258, 487);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(64, 33);
+            this.saveBtn.TabIndex = 6;
+            this.saveBtn.Text = " 保存";
+            this.saveBtn.UseVisualStyleBackColor = false;
+            this.saveBtn.Click += new System.EventHandler(this.ClickSaveBtn);
             // 
             // FormStoreRegionInfo
             // 
@@ -300,12 +303,12 @@ namespace WTCS.WTCSApp.store
             this.Load += new System.EventHandler(this.LoadStoreRegionForm);
             this.panel1.ResumeLayout(false);
             this.storeInfoGroup.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.TemperPanel.ResumeLayout(false);
-            this.TemperPanel.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.TemperPanel.ResumeLayout(false);
+            this.TemperPanel.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }

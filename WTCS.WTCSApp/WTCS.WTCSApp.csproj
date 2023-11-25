@@ -80,6 +80,12 @@
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="MsgBoxHelper.cs" />
+    <Compile Include="product\FormProductInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="product\FormProductInfo.Designer.cs">
+      <DependentUpon>FormProductInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="product\FormProductInStore.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="product\FormProductInfo.resx">
+      <DependentUpon>FormProductInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="product\FormProductInStore.resx">
       <DependentUpon>FormProductInStore.cs</DependentUpon>
