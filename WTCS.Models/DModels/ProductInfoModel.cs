@@ -13,13 +13,13 @@ namespace WTCS.Models.DModels
     /// 
     [Table("ProductInfos")]
     [PrimaryKey("ProductId", autoIncrement = true)]
-    class ProductInfoModel
+    public class ProductInfoModel
     {
         public int ProductId { get; set; }
         public string ProductName { get; set; }
         public string ProductNo { get; set; }
-        public decimal FitLowestTemperature { get; set; }
-        public decimal FitHighestTemperature { get; set; }
+        public decimal? FitLowestTemperature { get; set; }
+        public decimal? FitHighestTemperature { get; set; }
 
         public int IsDeleted { get; set; }
     }

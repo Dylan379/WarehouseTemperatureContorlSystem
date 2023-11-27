@@ -13,7 +13,7 @@ namespace WTCS.Models.DModels
     /// 
     [Table("ProductInStoreRecordInfos")]
     [PrimaryKey("RecordId", autoIncrement = true)]
-    class ProductInStoreRecordInfoModel
+    public class ProductInStoreRecordInfoModel
     {
         public int RecordId { get; set; }
         public int ProductId { get; set; }

@@ -30,8 +30,11 @@ namespace WTCS.WTCSApp.product
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.productBackBtn = new WTCS.WTCSApp.UControls.UCircleButton();
             this.backBtn = new WTCS.WTCSApp.UControls.UCircleButton();
             this.storeInfoGroup = new System.Windows.Forms.GroupBox();
+            this.fitHighestTemperatureInput = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.fitLowestTemperatureInput = new System.Windows.Forms.TextBox();
             this.productNoInput = new System.Windows.Forms.TextBox();
             this.productNameInput = new System.Windows.Forms.TextBox();
@@ -40,9 +43,6 @@ namespace WTCS.WTCSApp.product
             this.label1 = new System.Windows.Forms.Label();
             this.resetBtn = new System.Windows.Forms.Button();
             this.saveBtn = new System.Windows.Forms.Button();
-            this.fitHighestTemperatureInput = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.productBackBtn = new WTCS.WTCSApp.UControls.UCircleButton();
             this.panel1.SuspendLayout();
             this.storeInfoGroup.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +57,26 @@ namespace WTCS.WTCSApp.product
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(512, 48);
             this.panel1.TabIndex = 4;
+            // 
+            // productBackBtn
+            // 
+            this.productBackBtn.AnotherBackGroundColor = System.Drawing.Color.DarkGray;
+            this.productBackBtn.BackGroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.productBackBtn.BorderColor = System.Drawing.Color.Gray;
+            this.productBackBtn.BorderWidth = 0;
+            this.productBackBtn.FlatAppearance.BorderSize = 0;
+            this.productBackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.productBackBtn.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.productBackBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(255)))));
+            this.productBackBtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.productBackBtn.Location = new System.Drawing.Point(425, 12);
+            this.productBackBtn.Name = "productBackBtn";
+            this.productBackBtn.Radius = 5;
+            this.productBackBtn.Size = new System.Drawing.Size(56, 30);
+            this.productBackBtn.TabIndex = 1;
+            this.productBackBtn.Text = "返回";
+            this.productBackBtn.UseVisualStyleBackColor = true;
+            this.productBackBtn.Click += new System.EventHandler(this.ClickBackBtn);
             // 
             // backBtn
             // 
@@ -96,6 +116,22 @@ namespace WTCS.WTCSApp.product
             this.storeInfoGroup.TabIndex = 5;
             this.storeInfoGroup.TabStop = false;
             this.storeInfoGroup.Text = "产品信息";
+            // 
+            // fitHighestTemperatureInput
+            // 
+            this.fitHighestTemperatureInput.Location = new System.Drawing.Point(210, 201);
+            this.fitHighestTemperatureInput.Name = "fitHighestTemperatureInput";
+            this.fitHighestTemperatureInput.Size = new System.Drawing.Size(106, 27);
+            this.fitHighestTemperatureInput.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(121, 204);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 20);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "适合高温:";
             // 
             // fitLowestTemperatureInput
             // 
@@ -158,6 +194,7 @@ namespace WTCS.WTCSApp.product
             this.resetBtn.TabIndex = 7;
             this.resetBtn.Text = "清空";
             this.resetBtn.UseVisualStyleBackColor = false;
+            this.resetBtn.Click += new System.EventHandler(this.ClickResetBtn);
             // 
             // saveBtn
             // 
@@ -172,41 +209,7 @@ namespace WTCS.WTCSApp.product
             this.saveBtn.TabIndex = 6;
             this.saveBtn.Text = " 保存";
             this.saveBtn.UseVisualStyleBackColor = false;
-            // 
-            // fitHighestTemperatureInput
-            // 
-            this.fitHighestTemperatureInput.Location = new System.Drawing.Point(210, 201);
-            this.fitHighestTemperatureInput.Name = "fitHighestTemperatureInput";
-            this.fitHighestTemperatureInput.Size = new System.Drawing.Size(106, 27);
-            this.fitHighestTemperatureInput.TabIndex = 9;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(121, 204);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "适合高温:";
-            // 
-            // productBackBtn
-            // 
-            this.productBackBtn.AnotherBackGroundColor = System.Drawing.Color.DarkGray;
-            this.productBackBtn.BackGroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.productBackBtn.BorderColor = System.Drawing.Color.Gray;
-            this.productBackBtn.BorderWidth = 0;
-            this.productBackBtn.FlatAppearance.BorderSize = 0;
-            this.productBackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.productBackBtn.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.productBackBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(255)))));
-            this.productBackBtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.productBackBtn.Location = new System.Drawing.Point(425, 12);
-            this.productBackBtn.Name = "productBackBtn";
-            this.productBackBtn.Radius = 5;
-            this.productBackBtn.Size = new System.Drawing.Size(56, 30);
-            this.productBackBtn.TabIndex = 1;
-            this.productBackBtn.Text = "返回";
-            this.productBackBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.ClickSaveBtn);
             // 
             // FormProductInfo
             // 
@@ -223,6 +226,7 @@ namespace WTCS.WTCSApp.product
             this.Name = "FormProductInfo";
             this.ShowIcon = false;
             this.Text = "产品信息页";
+            this.Load += new System.EventHandler(this.LoadProductInfoPage);
             this.panel1.ResumeLayout(false);
             this.storeInfoGroup.ResumeLayout(false);
             this.storeInfoGroup.PerformLayout();

@@ -30,3 +30,4 @@ D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.store.FormRegionLis
 D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.store.FormStoreList.resources
 D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.store.FormStoreInfo.resources
 D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.store.FormStoreRegionInfo.resources
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.product.FormProductInfo.resources

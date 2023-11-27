@@ -45,6 +45,7 @@
     <Compile Include="Base\BQuery.cs" />
     <Compile Include="Base\CreateSql.cs" />
     <Compile Include="Base\SqlModel.cs" />
+    <Compile Include="ProductDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoreDAL.cs" />
     <Compile Include="StoreRegionDAL.cs" />
