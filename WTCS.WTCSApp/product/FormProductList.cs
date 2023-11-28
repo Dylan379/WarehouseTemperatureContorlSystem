@@ -215,11 +215,15 @@ namespace WTCS.WTCSApp.product
 
         }
 
+
+        //点击刷新按钮
         private void ClickFlashBtn(object sender, EventArgs e)
         {
             isDeletedCheck.Checked = false;
             productNameInput.Clear();
             FindProductList();
         }
+
+
     }
 }

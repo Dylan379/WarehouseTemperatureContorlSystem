@@ -19,7 +19,7 @@ namespace WTCS.Models.DModels
         public int ProductId { get; set; }
         public int SRegionId { get; set; }
         public int ProductCount { get; set; }
-        public DateTime InStoreTime { get; set; }
+        public DateTime? InStoreTime { get; set; }
         public int IsDeleted { get; set; }
     }
 }

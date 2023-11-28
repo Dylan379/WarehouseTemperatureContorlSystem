@@ -220,5 +220,19 @@ namespace WTCS.DAL
 
         }
 
+
+        /// <summary>
+        /// 获取指定仓库分区列表
+        /// </summary>
+        /// <param name="storeId"></param>
+        /// <returns></returns>
+        public List<StoreRegionInfoModel> GetRegionListByStoreId(int storeId)
+        {
+            string strWhere = " StoreId = " + storeId + " and IsDeleted = 0 ";
+
+            return GetModelList(strWhere, "SRegionId,SRegionName");
+        }
+
+
     }
 }

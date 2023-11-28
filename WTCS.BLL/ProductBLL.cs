@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 using WTCS.DAL;
 using WTCS.DAL.Base;
 using WTCS.Models.DModels;
+using WTCS.Models.VModels;
 
 namespace WTCS.BLL
 {
     public class ProductBLL
     {
         ProductDAL pDAL = new ProductDAL();
+        ViewProductStoreDAL vpsDAL = new ViewProductStoreDAL();
+        ProductStoreDAL psDAL = new ProductStoreDAL();
         /// <summary>
         /// 得到产品列表
         /// </summary>
@@ -184,5 +187,42 @@ namespace WTCS.BLL
             return pDAL.UpdateProductInfo(productInfo);
         }
 
+
+
+        #region 产品入库
+
+        /// <summary>
+        /// 获取所有产品库存数据
+        /// </summary>
+        /// <returns></returns>
+        public List<ViewProductStoreInfo> GetAllProductStoreList()
+        {
+            return vpsDAL.GetAllProductStoreList();
+        }
+
+        /// <summary>
+        /// 检查指定产品在指定分区中是否有库存
+        /// </summary>
+        /// <param name="productId"></param>
+        /// <param name="sRegionId"></param>
+        /// <returns></returns>
+        public bool InStoreProducts(ProductStoreInfoModel infoModel)
+        {
+            if (infoModel == null)
+                throw new Exception("入库信息不能为null");
+            if (psDAL.ExistProductStoreRecord(infoModel.ProductId, infoModel.SRegionId))
+            {
+                //修改产品数量
+
+                return psDAL.UpdateProductToStore(infoModel);
+            }
+            else
+            {
+                //新增产品入库,以及入库信息
+                return psDAL.AddProductToStore(infoModel);
+            }
+        }
+
+        #endregion
     }
 }

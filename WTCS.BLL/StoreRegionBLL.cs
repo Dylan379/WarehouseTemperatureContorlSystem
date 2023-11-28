@@ -187,6 +187,21 @@ namespace WTCS.BLL
         }
 
 
+        /// <summary>
+        /// 获取指定仓库的分区列表
+        /// </summary>
+        /// <param name="storeId"></param>
+        /// <returns></returns>
+        public List<StoreRegionInfoModel> GetRegionListByStoreId(int storeId)
+        {
+
+            return srDAL.GetRegionListByStoreId(storeId);
+        }
+
+
+
+
+
 
     }
 

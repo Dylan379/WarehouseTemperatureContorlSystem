@@ -48,6 +48,7 @@
     <Compile Include="DModels\StoreRegionInfoModel.cs" />
     <Compile Include="DModels\UserInfoModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VModels\ViewProductStoreInfo.cs" />
     <Compile Include="VModels\ViewStoreRegionInfo.cs" />
   </ItemGroup>
   <ItemGroup>
