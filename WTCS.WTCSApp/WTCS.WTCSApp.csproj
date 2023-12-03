@@ -130,6 +130,12 @@
     <Compile Include="store\FormStoreRegionInfo.Designer.cs">
       <DependentUpon>FormStoreRegionInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="UControls\UCircle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControls\UCircle.Designer.cs">
+      <DependentUpon>UCircle.cs</DependentUpon>
+    </Compile>
     <Compile Include="UControls\UCircleButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -141,6 +147,12 @@
     </Compile>
     <Compile Include="UControls\UIconButton.Designer.cs">
       <DependentUpon>UIconButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControls\UIndicatorLight.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControls\UIndicatorLight.Designer.cs">
+      <DependentUpon>UIndicatorLight.cs</DependentUpon>
     </Compile>
     <Compile Include="UControls\UMenuButton.cs">
       <SubType>UserControl</SubType>
@@ -159,6 +171,18 @@
     </Compile>
     <Compile Include="UControls\UPanel.Designer.cs">
       <DependentUpon>UPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControls\UStoreRegionBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControls\UStoreRegionBox.Designer.cs">
+      <DependentUpon>UStoreRegionBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControls\UThermometer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControls\UThermometer.Designer.cs">
+      <DependentUpon>UThermometer.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -200,6 +224,12 @@
     <EmbeddedResource Include="store\FormStoreRegionInfo.resx">
       <DependentUpon>FormStoreRegionInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UControls\UCircle.resx">
+      <DependentUpon>UCircle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControls\UIndicatorLight.resx">
+      <DependentUpon>UIndicatorLight.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UControls\UMenuButton.resx">
       <DependentUpon>UMenuButton.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +238,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UControls\UPanel.resx">
       <DependentUpon>UPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControls\UStoreRegionBox.resx">
+      <DependentUpon>UStoreRegionBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControls\UThermometer.resx">
+      <DependentUpon>UThermometer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
