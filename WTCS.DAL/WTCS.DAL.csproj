@@ -52,6 +52,7 @@
     <Compile Include="StoreRegionDAL.cs" />
     <Compile Include="UserDAL.cs" />
     <Compile Include="ViewProductStoreDAL.cs" />
+    <Compile Include="ViewSRegionTemperDAL.cs" />
     <Compile Include="ViewStoreRegionDAL.cs" />
   </ItemGroup>
   <ItemGroup>

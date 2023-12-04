@@ -16,5 +16,20 @@ namespace WTCS.WTCSApp.storeTemper
         {
             InitializeComponent();
         }
+
+        private void uPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void uPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FormStoreRegionTemperList_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

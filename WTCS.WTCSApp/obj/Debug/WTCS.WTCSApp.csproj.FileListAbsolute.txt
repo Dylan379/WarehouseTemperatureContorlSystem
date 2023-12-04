@@ -35,3 +35,4 @@ D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.UControls.UCircle.r
 D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.UControls.UIndicatorLight.resources
 D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.UControls.UThermometer.resources
 D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.UControls.UStoreRegionBox.resources
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.storeTemper.FormSetRegionTemperature.resources

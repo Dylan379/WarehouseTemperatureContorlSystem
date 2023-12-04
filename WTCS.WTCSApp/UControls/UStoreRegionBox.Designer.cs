@@ -78,6 +78,7 @@ namespace WTCS.WTCSApp.UControls
             this.temperatureChangeBtn.TabIndex = 2;
             this.temperatureChangeBtn.Text = "温控";
             this.temperatureChangeBtn.UseVisualStyleBackColor = true;
+            this.temperatureChangeBtn.Click += new System.EventHandler(this.ClickTemperControlBtn);
             // 
             // SRegionNameText
             // 

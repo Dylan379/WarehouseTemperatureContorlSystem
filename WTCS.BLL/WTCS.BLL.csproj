@@ -46,6 +46,7 @@
     <Compile Include="StoreBLL.cs" />
     <Compile Include="StoreRegionBLL.cs" />
     <Compile Include="UserBLL.cs" />
+    <Compile Include="SRegionTemperBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">

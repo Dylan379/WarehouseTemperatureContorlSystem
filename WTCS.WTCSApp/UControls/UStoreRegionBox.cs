@@ -207,8 +207,20 @@ namespace WTCS.WTCSApp.UControls
             }
         }
 
+        //设置分区温度事件
+        public event Action<object, UStoreRegionArgs> SetTemperature;
 
 
+        /// <summary>
+        /// 升温或降温事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClickTemperControlBtn(object sender, EventArgs e)
+        {
+            UStoreRegionArgs args = new UStoreRegionArgs(SId, SRegionId, TemperState, SRTemper);
 
+            SetTemperature?.Invoke(sender, args);
+        }
     }
 }
