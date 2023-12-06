@@ -234,5 +234,38 @@ namespace WTCS.DAL
         }
 
 
+        /// <summary>
+        /// 批量更新分区室温
+        /// </summary>
+        /// <param name="regions"></param>
+        /// <returns></returns>
+        public bool UpdateSRegionSRTemperature(List<StoreRegionInfoModel> regions)
+        {
+            List<string> sqlList = new List<string>();
+
+            foreach (StoreRegionInfoModel info in regions)
+            {
+                string sql = $"Update StoreRegionInfos set SRTemperature = {info.SRTemperature} , TemperState = {info.TemperState} " +
+                             $"where SRegionId = {info.SRegionId}";
+                sqlList.Add(sql);
+            }
+            return SqlHelper.ExecuteTrans(sqlList);
+        }
+
+
+        /// <summary>
+        /// 跟新指定仓库分区的室温
+        /// </summary>
+        /// <param name="regionId"></param>
+        /// <param name="srTemperature"></param>
+        /// <returns></returns>
+        public bool UpdateSRTemperatureById(int regionId, decimal srTemperature)
+        {
+            string sql = $"Update StoreRegionInfos set SRTemperature = {srTemperature} , TemperState = 1 " +
+                         $"where SRegionId = {regionId}";
+            return SqlHelper.ExecuteNonQuery(sql, 1) > 0;
+
+        }
+
     }
 }

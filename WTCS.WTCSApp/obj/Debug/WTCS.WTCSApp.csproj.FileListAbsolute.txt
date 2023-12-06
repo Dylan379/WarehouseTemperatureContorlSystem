@@ -36,3 +36,5 @@ D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.UControls.UIndicato
 D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.UControls.UThermometer.resources
 D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.UControls.UStoreRegionBox.resources
 D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\obj\Debug\WTCS.WTCSApp.storeTemper.FormSetRegionTemperature.resources
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\bin\Debug\Communicate.dll
+D:\c#workSpace\WTCS\WTCS\WTCS.WTCSApp\bin\Debug\Communicate.pdb
