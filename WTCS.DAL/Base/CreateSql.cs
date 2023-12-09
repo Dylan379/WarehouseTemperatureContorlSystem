@@ -173,7 +173,7 @@ namespace WTCS.DAL.Base
             if (!string.IsNullOrEmpty(notHaveCols))
             {
                 notCols = new List<string>(notHaveCols.Split(','));
-                cols = cols.Where(c => !notCols.Contains(c.ToLower())).ToList();
+                cols = cols.Where(c => !notCols.Contains(c)).ToList();
             }
             string colsStr = string.Join(",", cols);
             return colsStr;

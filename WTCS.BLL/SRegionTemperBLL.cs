@@ -8,6 +8,7 @@ using WTCS.DAL;
 using WTCS.Models.DModels;
 using WTCS.Models.UIModels;
 using WTCS.Models.VModels;
+using System.IO.Ports;
 
 namespace WTCS.BLL
 {
@@ -54,10 +55,10 @@ namespace WTCS.BLL
                     {
                         if (item.AllowLowestTemperature > item.SRTemperature)
                             item.TemperState = 0;
-                        if (item.AllowHighestTemperature < item.SRTemperature)
+                        else if (item.AllowHighestTemperature < item.SRTemperature)
                             item.TemperState = 2;
                         else
-                            item.SRTemperature = 1;
+                            item.TemperState = 1;
                     }
                     id++;
                     boxList.Add(new StoreRegionBoxModel()
@@ -109,7 +110,7 @@ namespace WTCS.BLL
                             for (int i = 0; i < values.Count; i++)
                             {
                                 //读取到的温度值
-                                decimal temperValue = decimal.Parse(((decimal)(values[i] / 10)).ToString("0.00"));
+                                decimal temperValue = decimal.Parse(((decimal)values[i] / 10).ToString("f2"));
                                 StoreRegionInfoModel regionInfo = new StoreRegionInfoModel();
                                 regionInfo.SRegionId = regionTemperList[i].SRegionId;
                                 regionInfo.SRTemperature = temperValue;
@@ -128,7 +129,9 @@ namespace WTCS.BLL
                             }
                             //将读取到的分区室温数据更新到数据库
 
-
+                            bool IsUpdate = srDAL.UpdateSRegionSRTemperature(regions);
+                            if (!IsUpdate)
+                                return null;
 
 
                         }
@@ -142,5 +145,37 @@ namespace WTCS.BLL
             }
             return GetRegionBoxList(regionTemperList);
         }
+
+
+        /// <summary>
+        /// 将调整后的温度写入设备
+        /// </summary>
+        /// <param name="sId"></param>
+        /// <param name="srTemperature"></param>
+        /// <returns></returns>
+        public bool SetSRTemperature(int sId, decimal srTemperature)
+        {
+            ModbusRTU mbRTU = new ModbusRTU("COM1",
+                                             9600,
+                                             8,
+                                             StopBits.One,
+                                             Parity.None);
+            bool result;
+            if (mbRTU.Open())
+            {
+                result = Task.Run(async () =>
+               {
+                   //要写入的数据
+                   ushort value = (ushort)(srTemperature * 10);
+                   bool valueGot = await mbRTU.WriteUInt16(sId, value);
+                   return valueGot;
+               }).Result;
+                mbRTU.Close();
+            }
+
+            return false;
+        }
+
+
     }
 }

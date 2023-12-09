@@ -203,7 +203,7 @@ namespace WTCS.WTCSApp.UControls
             set
             {
                 UBoxSource.TemperRange = value;
-                temperatureRangeLabel.Text = UBoxSource.TemperRange.ToString() + "℃";
+                temperatureRangeLabel.Text = UBoxSource.TemperRange.ToString();
             }
         }
 
@@ -218,7 +218,11 @@ namespace WTCS.WTCSApp.UControls
         /// <param name="e"></param>
         private void ClickTemperControlBtn(object sender, EventArgs e)
         {
-            UStoreRegionArgs args = new UStoreRegionArgs(SId, SRegionId, TemperState, SRTemper);
+            UStoreRegionArgs args = new UStoreRegionArgs(SId,
+                                                         SRegionId,
+                                                         TemperState,
+                                                         MinTemper,
+                                                         MaxTemper);
 
             SetTemperature?.Invoke(sender, args);
         }

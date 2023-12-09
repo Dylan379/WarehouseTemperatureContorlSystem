@@ -30,13 +30,10 @@ namespace WTCS.WTCSApp.UControls
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.temperatureChangeBtn = new WTCS.WTCSApp.UControls.UCircleButton();
             this.SRegionNameText = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.uTemperValue = new WTCS.WTCSApp.UControls.UThermometer();
             this.label6 = new System.Windows.Forms.Label();
-            this.SRTemperStateLight = new WTCS.WTCSApp.UControls.UCircle();
             this.temperatureRangeLabel = new System.Windows.Forms.Label();
             this.currentTemperatureLabel = new System.Windows.Forms.Label();
             this.productCountLabel = new System.Windows.Forms.Label();
@@ -44,6 +41,9 @@ namespace WTCS.WTCSApp.UControls
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.uTemperValue = new WTCS.WTCSApp.UControls.UThermometer();
+            this.SRTemperStateLight = new WTCS.WTCSApp.UControls.UCircle();
+            this.temperatureChangeBtn = new WTCS.WTCSApp.UControls.UCircleButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -59,26 +59,6 @@ namespace WTCS.WTCSApp.UControls
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(348, 42);
             this.panel1.TabIndex = 0;
-            // 
-            // temperatureChangeBtn
-            // 
-            this.temperatureChangeBtn.AnotherBackGroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(61)))), ((int)(((byte)(76)))));
-            this.temperatureChangeBtn.BackGroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(134)))), ((int)(((byte)(118)))));
-            this.temperatureChangeBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(104)))), ((int)(((byte)(183)))));
-            this.temperatureChangeBtn.BorderWidth = 0;
-            this.temperatureChangeBtn.FlatAppearance.BorderSize = 0;
-            this.temperatureChangeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.temperatureChangeBtn.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.temperatureChangeBtn.ForeColor = System.Drawing.Color.White;
-            this.temperatureChangeBtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.temperatureChangeBtn.Location = new System.Drawing.Point(257, 9);
-            this.temperatureChangeBtn.Name = "temperatureChangeBtn";
-            this.temperatureChangeBtn.Radius = 10;
-            this.temperatureChangeBtn.Size = new System.Drawing.Size(62, 27);
-            this.temperatureChangeBtn.TabIndex = 2;
-            this.temperatureChangeBtn.Text = "温控";
-            this.temperatureChangeBtn.UseVisualStyleBackColor = true;
-            this.temperatureChangeBtn.Click += new System.EventHandler(this.ClickTemperControlBtn);
             // 
             // SRegionNameText
             // 
@@ -121,64 +101,16 @@ namespace WTCS.WTCSApp.UControls
             this.panel2.Size = new System.Drawing.Size(348, 168);
             this.panel2.TabIndex = 1;
             // 
-            // uTemperValue
-            // 
-            this.uTemperValue.BMaxValue = new decimal(new int[] {
-            30,
-            0,
-            0,
-            0});
-            this.uTemperValue.BMinValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.uTemperValue.Font = new System.Drawing.Font("SimSun", 6.6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uTemperValue.ForeColor = System.Drawing.Color.White;
-            this.uTemperValue.GlassTubeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
-            this.uTemperValue.LeftTemperatureUnit = WTCS.WTCSApp.UControls.UThermometer.TemperatureUnit.C;
-            this.uTemperValue.Location = new System.Drawing.Point(257, 3);
-            this.uTemperValue.MaxValue = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.uTemperValue.MercuryColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(59)))));
-            this.uTemperValue.MinValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.uTemperValue.Name = "uTemperValue";
-            this.uTemperValue.Size = new System.Drawing.Size(71, 154);
-            this.uTemperValue.SpCount = 5;
-            this.uTemperValue.TabIndex = 12;
-            this.uTemperValue.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.uTemperValue.ValueColor = System.Drawing.Color.White;
-            this.uTemperValue.ValueFont = new System.Drawing.Font("SimSun", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label6.ForeColor = System.Drawing.Color.Yellow;
-            this.label6.Location = new System.Drawing.Point(142, 54);
+            this.label6.Location = new System.Drawing.Point(158, 54);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(24, 19);
             this.label6.TabIndex = 8;
             this.label6.Text = "℃";
-            // 
-            // SRTemperStateLight
-            // 
-            this.SRTemperStateLight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(201)))), ((int)(((byte)(151)))));
-            this.SRTemperStateLight.Location = new System.Drawing.Point(107, 131);
-            this.SRTemperStateLight.Name = "SRTemperStateLight";
-            this.SRTemperStateLight.Size = new System.Drawing.Size(20, 20);
-            this.SRTemperStateLight.TabIndex = 7;
             // 
             // temperatureRangeLabel
             // 
@@ -256,6 +188,74 @@ namespace WTCS.WTCSApp.UControls
             this.label2.Size = new System.Drawing.Size(73, 19);
             this.label2.TabIndex = 0;
             this.label2.Text = "产品数量:";
+            // 
+            // uTemperValue
+            // 
+            this.uTemperValue.BMaxValue = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.uTemperValue.BMinValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.uTemperValue.Font = new System.Drawing.Font("SimSun", 6.6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uTemperValue.ForeColor = System.Drawing.Color.White;
+            this.uTemperValue.GlassTubeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
+            this.uTemperValue.LeftTemperatureUnit = WTCS.WTCSApp.UControls.UThermometer.TemperatureUnit.C;
+            this.uTemperValue.Location = new System.Drawing.Point(257, 3);
+            this.uTemperValue.MaxValue = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.uTemperValue.MercuryColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(59)))));
+            this.uTemperValue.MinValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.uTemperValue.Name = "uTemperValue";
+            this.uTemperValue.Size = new System.Drawing.Size(71, 154);
+            this.uTemperValue.SpCount = 5;
+            this.uTemperValue.TabIndex = 12;
+            this.uTemperValue.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.uTemperValue.ValueColor = System.Drawing.Color.White;
+            this.uTemperValue.ValueFont = new System.Drawing.Font("SimSun", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            // 
+            // SRTemperStateLight
+            // 
+            this.SRTemperStateLight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(201)))), ((int)(((byte)(151)))));
+            this.SRTemperStateLight.Location = new System.Drawing.Point(107, 131);
+            this.SRTemperStateLight.Name = "SRTemperStateLight";
+            this.SRTemperStateLight.Size = new System.Drawing.Size(20, 20);
+            this.SRTemperStateLight.TabIndex = 7;
+            // 
+            // temperatureChangeBtn
+            // 
+            this.temperatureChangeBtn.AnotherBackGroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(61)))), ((int)(((byte)(76)))));
+            this.temperatureChangeBtn.BackGroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(134)))), ((int)(((byte)(118)))));
+            this.temperatureChangeBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(104)))), ((int)(((byte)(183)))));
+            this.temperatureChangeBtn.BorderWidth = 0;
+            this.temperatureChangeBtn.FlatAppearance.BorderSize = 0;
+            this.temperatureChangeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.temperatureChangeBtn.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.temperatureChangeBtn.ForeColor = System.Drawing.Color.White;
+            this.temperatureChangeBtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.temperatureChangeBtn.Location = new System.Drawing.Point(257, 9);
+            this.temperatureChangeBtn.Name = "temperatureChangeBtn";
+            this.temperatureChangeBtn.Radius = 10;
+            this.temperatureChangeBtn.Size = new System.Drawing.Size(62, 27);
+            this.temperatureChangeBtn.TabIndex = 2;
+            this.temperatureChangeBtn.Text = "温控";
+            this.temperatureChangeBtn.UseVisualStyleBackColor = true;
+            this.temperatureChangeBtn.Click += new System.EventHandler(this.ClickTemperControlBtn);
             // 
             // UStoreRegionBox
             // 

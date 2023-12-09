@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WTCS.Models.VModels
 {
-    [Table("ViewSRegionInfos")]
+    [Table("ViewSRegionTemperInfos")]
     public class ViewSRegionTemperInfo
     {
         public int StoreId { get; set; }

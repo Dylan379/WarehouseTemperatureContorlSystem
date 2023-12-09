@@ -29,25 +29,164 @@ namespace WTCS.WTCSApp.storeTemper
         /// </summary>
         private void InitializeComponent()
         {
-            this.uPanel1 = new WTCS.WTCSApp.UControls.UPanel();
-            this.uIndicatorLight3 = new WTCS.WTCSApp.UControls.UIndicatorLight();
-            this.uIndicatorLight2 = new WTCS.WTCSApp.UControls.UIndicatorLight();
-            this.uIndicatorLight1 = new WTCS.WTCSApp.UControls.UIndicatorLight();
+            this.regionListFLP = new System.Windows.Forms.FlowLayoutPanel();
             this.uPanel2 = new WTCS.WTCSApp.UControls.UPanel();
+            this.messageLable = new System.Windows.Forms.Label();
             this.storeComboBox = new System.Windows.Forms.ComboBox();
+            this.flashBtn = new WTCS.WTCSApp.UControls.UCircleButton();
             this.label3 = new System.Windows.Forms.Label();
             this.checkBtn = new System.Windows.Forms.Button();
             this.uPanel3 = new WTCS.WTCSApp.UControls.UPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.flashBtn = new WTCS.WTCSApp.UControls.UCircleButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.uPanel1 = new WTCS.WTCSApp.UControls.UPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.regionListFLP = new System.Windows.Forms.FlowLayoutPanel();
-            this.uPanel1.SuspendLayout();
+            this.uIndicatorLight3 = new WTCS.WTCSApp.UControls.UIndicatorLight();
+            this.uIndicatorLight2 = new WTCS.WTCSApp.UControls.UIndicatorLight();
+            this.uIndicatorLight1 = new WTCS.WTCSApp.UControls.UIndicatorLight();
             this.uPanel2.SuspendLayout();
             this.uPanel3.SuspendLayout();
+            this.uPanel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // regionListFLP
+            // 
+            this.regionListFLP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.regionListFLP.Location = new System.Drawing.Point(0, 165);
+            this.regionListFLP.Name = "regionListFLP";
+            this.regionListFLP.Size = new System.Drawing.Size(996, 419);
+            this.regionListFLP.TabIndex = 5;
+            // 
+            // uPanel2
+            // 
+            this.uPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uPanel2.AnotherBackGroundColor = System.Drawing.Color.Transparent;
+            this.uPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(116)))));
+            this.uPanel2.BackGroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(116)))));
+            this.uPanel2.BorderColor = System.Drawing.Color.Gray;
+            this.uPanel2.BorderWidth = 0;
+            this.uPanel2.Controls.Add(this.messageLable);
+            this.uPanel2.Controls.Add(this.storeComboBox);
+            this.uPanel2.Controls.Add(this.flashBtn);
+            this.uPanel2.Controls.Add(this.label3);
+            this.uPanel2.Controls.Add(this.checkBtn);
+            this.uPanel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.uPanel2.Location = new System.Drawing.Point(4, 58);
+            this.uPanel2.Name = "uPanel2";
+            this.uPanel2.Radius = 5;
+            this.uPanel2.Size = new System.Drawing.Size(992, 58);
+            this.uPanel2.TabIndex = 4;
+            this.uPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.uPanel2_Paint);
+            // 
+            // messageLable
+            // 
+            this.messageLable.AutoSize = true;
+            this.messageLable.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.messageLable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(193)))), ((int)(((byte)(253)))));
+            this.messageLable.Location = new System.Drawing.Point(468, 13);
+            this.messageLable.Name = "messageLable";
+            this.messageLable.Size = new System.Drawing.Size(92, 27);
+            this.messageLable.TabIndex = 9;
+            this.messageLable.Text = "检测完成";
+            // 
+            // storeComboBox
+            // 
+            this.storeComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(61)))), ((int)(((byte)(133)))));
+            this.storeComboBox.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.storeComboBox.ForeColor = System.Drawing.Color.White;
+            this.storeComboBox.FormattingEnabled = true;
+            this.storeComboBox.Location = new System.Drawing.Point(126, 12);
+            this.storeComboBox.Name = "storeComboBox";
+            this.storeComboBox.Size = new System.Drawing.Size(150, 32);
+            this.storeComboBox.TabIndex = 8;
+            // 
+            // flashBtn
+            // 
+            this.flashBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.flashBtn.AnotherBackGroundColor = System.Drawing.Color.MidnightBlue;
+            this.flashBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
+            this.flashBtn.BackGroundColor = System.Drawing.Color.CornflowerBlue;
+            this.flashBtn.BorderColor = System.Drawing.Color.CornflowerBlue;
+            this.flashBtn.BorderWidth = 0;
+            this.flashBtn.FlatAppearance.BorderSize = 0;
+            this.flashBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.flashBtn.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.flashBtn.ForeColor = System.Drawing.Color.White;
+            this.flashBtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.flashBtn.Location = new System.Drawing.Point(883, 12);
+            this.flashBtn.Name = "flashBtn";
+            this.flashBtn.Radius = 10;
+            this.flashBtn.Size = new System.Drawing.Size(60, 33);
+            this.flashBtn.TabIndex = 1;
+            this.flashBtn.Text = "刷新";
+            this.flashBtn.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(193)))), ((int)(((byte)(253)))));
+            this.label3.Location = new System.Drawing.Point(8, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(112, 27);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "仓库选择：";
+            // 
+            // checkBtn
+            // 
+            this.checkBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
+            this.checkBtn.FlatAppearance.BorderSize = 0;
+            this.checkBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBtn.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.checkBtn.ForeColor = System.Drawing.Color.White;
+            this.checkBtn.Location = new System.Drawing.Point(310, 11);
+            this.checkBtn.Name = "checkBtn";
+            this.checkBtn.Size = new System.Drawing.Size(125, 33);
+            this.checkBtn.TabIndex = 3;
+            this.checkBtn.Text = "手动检测";
+            this.checkBtn.UseVisualStyleBackColor = false;
+            this.checkBtn.Click += new System.EventHandler(this.ClickTestBtn);
+            // 
+            // uPanel3
+            // 
+            this.uPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uPanel3.AnotherBackGroundColor = System.Drawing.Color.Transparent;
+            this.uPanel3.BackColor = System.Drawing.Color.Transparent;
+            this.uPanel3.BackGroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
+            this.uPanel3.BorderColor = System.Drawing.Color.Gray;
+            this.uPanel3.BorderWidth = 0;
+            this.uPanel3.Controls.Add(this.panel1);
+            this.uPanel3.Controls.Add(this.label1);
+            this.uPanel3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.uPanel3.Location = new System.Drawing.Point(0, 0);
+            this.uPanel3.Name = "uPanel3";
+            this.uPanel3.Radius = 5;
+            this.uPanel3.Size = new System.Drawing.Size(996, 60);
+            this.uPanel3.TabIndex = 3;
+            this.uPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.uPanel3_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(3, 58);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(436, 58);
+            this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(172, 27);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "仓库温控管理页面";
             // 
             // uPanel1
             // 
@@ -68,6 +207,17 @@ namespace WTCS.WTCSApp.storeTemper
             this.uPanel1.Radius = 8;
             this.uPanel1.Size = new System.Drawing.Size(996, 50);
             this.uPanel1.TabIndex = 2;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(63, 13);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(152, 27);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "仓库分区列表：";
             // 
             // uIndicatorLight3
             // 
@@ -99,155 +249,6 @@ namespace WTCS.WTCSApp.storeTemper
             this.uIndicatorLight1.Size = new System.Drawing.Size(90, 40);
             this.uIndicatorLight1.TabIndex = 0;
             // 
-            // uPanel2
-            // 
-            this.uPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.uPanel2.AnotherBackGroundColor = System.Drawing.Color.Transparent;
-            this.uPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(116)))));
-            this.uPanel2.BackGroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(50)))), ((int)(((byte)(116)))));
-            this.uPanel2.BorderColor = System.Drawing.Color.Gray;
-            this.uPanel2.BorderWidth = 0;
-            this.uPanel2.Controls.Add(this.label2);
-            this.uPanel2.Controls.Add(this.storeComboBox);
-            this.uPanel2.Controls.Add(this.flashBtn);
-            this.uPanel2.Controls.Add(this.label3);
-            this.uPanel2.Controls.Add(this.checkBtn);
-            this.uPanel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.uPanel2.Location = new System.Drawing.Point(4, 58);
-            this.uPanel2.Name = "uPanel2";
-            this.uPanel2.Radius = 5;
-            this.uPanel2.Size = new System.Drawing.Size(992, 58);
-            this.uPanel2.TabIndex = 4;
-            this.uPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.uPanel2_Paint);
-            // 
-            // storeComboBox
-            // 
-            this.storeComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(61)))), ((int)(((byte)(133)))));
-            this.storeComboBox.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.storeComboBox.ForeColor = System.Drawing.Color.White;
-            this.storeComboBox.FormattingEnabled = true;
-            this.storeComboBox.Location = new System.Drawing.Point(126, 12);
-            this.storeComboBox.Name = "storeComboBox";
-            this.storeComboBox.Size = new System.Drawing.Size(150, 32);
-            this.storeComboBox.TabIndex = 8;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(193)))), ((int)(((byte)(253)))));
-            this.label3.Location = new System.Drawing.Point(8, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 27);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "仓库选择：";
-            // 
-            // checkBtn
-            // 
-            this.checkBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
-            this.checkBtn.FlatAppearance.BorderSize = 0;
-            this.checkBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBtn.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.checkBtn.ForeColor = System.Drawing.Color.White;
-            this.checkBtn.Location = new System.Drawing.Point(310, 11);
-            this.checkBtn.Name = "checkBtn";
-            this.checkBtn.Size = new System.Drawing.Size(125, 33);
-            this.checkBtn.TabIndex = 3;
-            this.checkBtn.Text = "手动检测";
-            this.checkBtn.UseVisualStyleBackColor = false;
-            // 
-            // uPanel3
-            // 
-            this.uPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.uPanel3.AnotherBackGroundColor = System.Drawing.Color.Transparent;
-            this.uPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.uPanel3.BackGroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
-            this.uPanel3.BorderColor = System.Drawing.Color.Gray;
-            this.uPanel3.BorderWidth = 0;
-            this.uPanel3.Controls.Add(this.panel1);
-            this.uPanel3.Controls.Add(this.label1);
-            this.uPanel3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.uPanel3.Location = new System.Drawing.Point(0, 0);
-            this.uPanel3.Name = "uPanel3";
-            this.uPanel3.Radius = 5;
-            this.uPanel3.Size = new System.Drawing.Size(996, 60);
-            this.uPanel3.TabIndex = 3;
-            this.uPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.uPanel3_Paint);
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(3, 58);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(436, 58);
-            this.panel1.TabIndex = 0;
-            // 
-            // flashBtn
-            // 
-            this.flashBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.flashBtn.AnotherBackGroundColor = System.Drawing.Color.MidnightBlue;
-            this.flashBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
-            this.flashBtn.BackGroundColor = System.Drawing.Color.CornflowerBlue;
-            this.flashBtn.BorderColor = System.Drawing.Color.CornflowerBlue;
-            this.flashBtn.BorderWidth = 0;
-            this.flashBtn.FlatAppearance.BorderSize = 0;
-            this.flashBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.flashBtn.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.flashBtn.ForeColor = System.Drawing.Color.White;
-            this.flashBtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.flashBtn.Location = new System.Drawing.Point(883, 12);
-            this.flashBtn.Name = "flashBtn";
-            this.flashBtn.Radius = 10;
-            this.flashBtn.Size = new System.Drawing.Size(60, 33);
-            this.flashBtn.TabIndex = 1;
-            this.flashBtn.Text = "刷新";
-            this.flashBtn.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 27);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "仓库温控管理页面";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(193)))), ((int)(((byte)(253)))));
-            this.label2.Location = new System.Drawing.Point(468, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 27);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "检测完成";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(63, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(152, 27);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "仓库分区列表：";
-            // 
-            // regionListFLP
-            // 
-            this.regionListFLP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.regionListFLP.Location = new System.Drawing.Point(0, 165);
-            this.regionListFLP.Name = "regionListFLP";
-            this.regionListFLP.Size = new System.Drawing.Size(996, 419);
-            this.regionListFLP.TabIndex = 5;
-            // 
             // FormStoreRegionTemperList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -260,13 +261,13 @@ namespace WTCS.WTCSApp.storeTemper
             this.Controls.Add(this.uPanel1);
             this.Name = "FormStoreRegionTemperList";
             this.Text = "仓库分区温度管理页面";
-            this.Load += new System.EventHandler(this.FormStoreRegionTemperList_Load);
-            this.uPanel1.ResumeLayout(false);
-            this.uPanel1.PerformLayout();
+            this.Load += new System.EventHandler(this.LoadStoreTemperControlPage);
             this.uPanel2.ResumeLayout(false);
             this.uPanel2.PerformLayout();
             this.uPanel3.ResumeLayout(false);
             this.uPanel3.PerformLayout();
+            this.uPanel1.ResumeLayout(false);
+            this.uPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -284,7 +285,7 @@ namespace WTCS.WTCSApp.storeTemper
         private System.Windows.Forms.Panel panel1;
         private UControls.UCircleButton flashBtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label messageLable;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.FlowLayoutPanel regionListFLP;
     }

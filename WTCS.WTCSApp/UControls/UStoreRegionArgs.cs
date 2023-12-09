@@ -15,12 +15,22 @@ namespace WTCS.WTCSApp.UControls
         public int SRegionId { get; set; }
         public int TemperState { get; set; }
         public decimal SRTemperature { get; set; }
-        public UStoreRegionArgs(int sId, int sRegionId, int temperState, decimal sRTemperature)
+
+        public decimal Lowtemperature { get; set; }
+        public decimal HighTemperature { get; set; }
+
+
+        public UStoreRegionArgs(int sId,
+                                int sRegionId,
+                                int temperState,
+                                decimal lowTemperature,
+                                decimal highTemperature)
         {
             SId = sId;
             SRegionId = sRegionId;
             TemperState = temperState;
-            SRTemperature = sRTemperature;
+            Lowtemperature = lowTemperature;
+            HighTemperature = highTemperature;
         }
 
     }

@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FModels\FInfoData.cs" />
+    <Compile Include="FModels\RegionTemperData.cs" />
     <Compile Include="FModels\RegionStateModel.cs" />
     <Compile Include="FormUtility.cs" />
     <Compile Include="FrmLogin.cs">

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WTCS.WTCSApp.UControls;
 
 namespace WTCS.WTCSApp.storeTemper
 {
@@ -21,5 +22,9 @@ namespace WTCS.WTCSApp.storeTemper
         {
 
         }
+
+        //刷新列表页该分区的温度与状态
+        public event Action<object, UStoreRegionArgs> ReloadRegion;
+
     }
 }
