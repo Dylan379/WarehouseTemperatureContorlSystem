@@ -54,6 +54,7 @@ namespace WTCS.WTCSApp.storeTemper
             this.regionListFLP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.regionListFLP.AutoScroll = true;
             this.regionListFLP.Location = new System.Drawing.Point(0, 165);
             this.regionListFLP.Name = "regionListFLP";
             this.regionListFLP.Size = new System.Drawing.Size(996, 419);
@@ -102,6 +103,7 @@ namespace WTCS.WTCSApp.storeTemper
             this.storeComboBox.Name = "storeComboBox";
             this.storeComboBox.Size = new System.Drawing.Size(150, 32);
             this.storeComboBox.TabIndex = 8;
+            this.storeComboBox.SelectedIndexChanged += new System.EventHandler(this.storeComboBox_SelectedIndexChanged);
             // 
             // flashBtn
             // 
@@ -123,6 +125,7 @@ namespace WTCS.WTCSApp.storeTemper
             this.flashBtn.TabIndex = 1;
             this.flashBtn.Text = "刷新";
             this.flashBtn.UseVisualStyleBackColor = false;
+            this.flashBtn.Click += new System.EventHandler(this.ClickFlashBtn);
             // 
             // label3
             // 
@@ -221,6 +224,7 @@ namespace WTCS.WTCSApp.storeTemper
             // 
             // uIndicatorLight3
             // 
+            this.uIndicatorLight3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uIndicatorLight3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
             this.uIndicatorLight3.CircleColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(61)))), ((int)(((byte)(76)))));
             this.uIndicatorLight3.LightText = "高温";
@@ -231,6 +235,7 @@ namespace WTCS.WTCSApp.storeTemper
             // 
             // uIndicatorLight2
             // 
+            this.uIndicatorLight2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uIndicatorLight2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
             this.uIndicatorLight2.CircleColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(206)))), ((int)(((byte)(244)))));
             this.uIndicatorLight2.LightText = "正常";
@@ -241,6 +246,7 @@ namespace WTCS.WTCSApp.storeTemper
             // 
             // uIndicatorLight1
             // 
+            this.uIndicatorLight1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.uIndicatorLight1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(44)))), ((int)(((byte)(102)))));
             this.uIndicatorLight1.CircleColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(201)))), ((int)(((byte)(151)))));
             this.uIndicatorLight1.LightText = "低温";

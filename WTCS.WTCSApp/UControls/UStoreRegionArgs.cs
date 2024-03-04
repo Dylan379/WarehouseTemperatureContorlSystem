@@ -32,6 +32,15 @@ namespace WTCS.WTCSApp.UControls
             Lowtemperature = lowTemperature;
             HighTemperature = highTemperature;
         }
+        public UStoreRegionArgs(int sRegionId,
+                               int temperState,
+                               decimal srTemperature)
+        {
+
+            SRegionId = sRegionId;
+            TemperState = temperState;
+            SRTemperature = srTemperature;
+        }
 
     }
 }

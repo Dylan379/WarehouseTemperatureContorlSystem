@@ -261,7 +261,7 @@ namespace WTCS.DAL
         /// <returns></returns>
         public bool UpdateSRTemperatureById(int regionId, decimal srTemperature)
         {
-            string sql = $"Update StoreRegionInfos set SRTemperature = {srTemperature} , TemperState = 1 " +
+            string sql = $"Update StoreRegionInfos SET SRTemperature = {srTemperature},TemperState = 1 " +
                          $"where SRegionId = {regionId}";
             return SqlHelper.ExecuteNonQuery(sql, 1) > 0;
 

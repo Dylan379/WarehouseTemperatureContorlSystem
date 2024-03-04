@@ -160,7 +160,7 @@ namespace WTCS.BLL
                                              8,
                                              StopBits.One,
                                              Parity.None);
-            bool result;
+            bool result = false;
             if (mbRTU.Open())
             {
                 result = Task.Run(async () =>
@@ -173,9 +173,20 @@ namespace WTCS.BLL
                 mbRTU.Close();
             }
 
-            return false;
+            return result;
         }
 
+        /// <summary>
+        /// 跟新指定仓库分区的室温
+        /// </summary>
+        /// <param name="regionId"></param>
+        /// <param name="srTemperature"></param>
+        /// <returns></returns>
+        public bool UpdateSRTemperatureById(int regionId, decimal srTemperature)
+        {
+            return srDAL.UpdateSRTemperatureById(regionId, srTemperature);
+
+        }
 
     }
 }

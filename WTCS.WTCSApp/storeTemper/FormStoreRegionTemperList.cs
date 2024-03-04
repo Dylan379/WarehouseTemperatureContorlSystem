@@ -157,5 +157,22 @@ namespace WTCS.WTCSApp.storeTemper
 
 
         }
+
+        private void storeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadSRegionBoxList();
+        }
+
+        /// <summary>
+        /// 刷新
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClickFlashBtn(object sender, EventArgs e)
+        {
+            storeComboBox.SelectedIndex = 0;
+            messageLable.Text = "";
+            LoadSRegionBoxList();
+        }
     }
 }

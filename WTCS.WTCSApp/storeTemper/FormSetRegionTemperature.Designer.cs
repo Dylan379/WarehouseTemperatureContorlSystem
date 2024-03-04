@@ -102,6 +102,7 @@ namespace WTCS.WTCSApp.storeTemper
             this.saveBtn.TabIndex = 7;
             this.saveBtn.Text = "确定";
             this.saveBtn.UseVisualStyleBackColor = false;
+            this.saveBtn.Click += new System.EventHandler(this.ClickComfirmBtn);
             // 
             // closePageBtn
             // 
@@ -116,6 +117,7 @@ namespace WTCS.WTCSApp.storeTemper
             this.closePageBtn.TabIndex = 8;
             this.closePageBtn.Text = "取消";
             this.closePageBtn.UseVisualStyleBackColor = false;
+            this.closePageBtn.Click += new System.EventHandler(this.ClickCancelBtn);
             // 
             // setTypeLabel
             // 
@@ -132,6 +134,7 @@ namespace WTCS.WTCSApp.storeTemper
             // 
             this.changeTemperCheckList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(61)))), ((int)(((byte)(133)))));
             this.changeTemperCheckList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.changeTemperCheckList.CheckOnClick = true;
             this.changeTemperCheckList.Font = new System.Drawing.Font("STZhongsong", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.changeTemperCheckList.ForeColor = System.Drawing.Color.White;
             this.changeTemperCheckList.FormattingEnabled = true;
@@ -172,9 +175,13 @@ namespace WTCS.WTCSApp.storeTemper
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormSetRegionTemperature";
             this.ShowIcon = false;
             this.Text = "仓库分区温度调整";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CloseForm);
+            this.Load += new System.EventHandler(this.PageLoad);
             ((System.ComponentModel.ISupportInitialize)(this.targetTemperUpdown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
